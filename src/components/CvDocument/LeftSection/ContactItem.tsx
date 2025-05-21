@@ -14,22 +14,40 @@ import Text from "../elements/Text";
 
 interface ContactItemProps {
   icon: ReactNode;
-  text: ReactNode;
+  text?: ReactNode;
   link?: string;
+  hasDiacritics?: boolean;
+  children?: ReactNode;
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({
   icon,
   text,
   link,
-}) => {
-  const textElementToRender = link
+  hasDiacritics = false,
+  children,
+}) => {  // For text with diacritical characters, use special handling
+  const renderText = () => {
+    if (children) {
+      return children;
+    }
+    
+    if (hasDiacritics && typeof text === 'string') {
+      return <Text contrast style={{ fontFamily: 'NotoSans' }}>{text}</Text>;
+    }
+    return <Text contrast>{text}</Text>;
+  };
+
+  const textElementToRender = link && text
     ? (
       <Link src={link}>
-        <Text contrast style={styles.linkText}>{text}</Text>
+        {hasDiacritics 
+          ? <Text contrast style={{ ...styles.linkText, fontFamily: 'NotoSans' }}>{text}</Text>
+          : <Text contrast style={styles.linkText}>{text}</Text>
+        }
       </Link>
     )
-    : <Text contrast>{text}</Text>;
+    : renderText();
 
   return (
     <View style={styles.container}>

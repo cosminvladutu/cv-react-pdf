@@ -20,6 +20,7 @@ import Text from "../elements/Text";
 import LeftSectionPanel from "./LeftSectionPanel";
 import SkillItem from "./SkillItem";
 import ContactItem from "./ContactItem";
+import RomanianLocation from "./RomanianLocation";
 
 const LeftSection = () => {
   return (
@@ -52,9 +53,7 @@ const LeftSection = () => {
           )}
           text={'radu@nemerenco.com'}
           link={'mailto:radu@nemerenco.com'}
-        />
-
-        <ContactItem
+        />        <ContactItem
           icon={(
             <Svg width="6.4px" height="10px">
               <G transform="scale(0.185)">
@@ -63,8 +62,9 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'Cluj-Napoca, Romania'}
-        />
+        >
+          <RomanianLocation />
+        </ContactItem>
 
         <ContactItem
           icon={(
@@ -133,9 +133,21 @@ const styles = StyleSheet.create({
     width: '90%',
     marginHorizontal: 'auto',
     marginBottom: 15
-  },  profilePicture: {
+  },
+  profilePicture: {
     borderRadius: 9999,
     transform: 'translateY(10px)',
+  },
+  contactItemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
+  contactIcon: {
+    width: 15,
+    marginRight: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
 
