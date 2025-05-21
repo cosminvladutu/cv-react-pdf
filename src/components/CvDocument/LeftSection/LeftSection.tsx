@@ -133,10 +133,9 @@ const styles = StyleSheet.create({
     width: '90%',
     marginHorizontal: 'auto',
     marginBottom: 15
-  },
-  profilePicture: {
+  },  profilePicture: {
     borderRadius: 9999,
-    transform: 'translateY(10p0x)',
+    transform: 'translateY(10px)',
   },
 })
 

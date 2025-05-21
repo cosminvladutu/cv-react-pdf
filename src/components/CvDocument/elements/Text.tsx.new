@@ -29,20 +29,16 @@ const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
   const combinedStyle = style
     ? { ...defaultStylesInternal, ...style}
     : defaultStylesInternal;
-    // Special handling for Romanian diacritical characters
-  const enhancedProps = {...props};
   
-  // If the text contains Romanian diacritical characters, use NotoSans font
-  if (typeof props.children === 'string' && /[ĂȚăț]/.test(props.children)) {
-    combinedStyle.fontFamily = 'NotoSans';
-  }
+  // Special handling for Romanian diacritical characters
+  const enhancedProps = {...props};
   
   return <PdfText style={combinedStyle} {...enhancedProps} />;
 };
 
 const defaultStyle = StyleSheet.create({
   text: {
-    fontFamily: 'Lato',
+    fontFamily: 'LatoRomanian',
     color: '#242424',
     fontSize: 9,
     textAlign: 'justify'

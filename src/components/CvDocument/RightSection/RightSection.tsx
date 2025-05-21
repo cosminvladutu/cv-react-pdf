@@ -13,6 +13,8 @@ import Text from "../elements/Text";
 import Hr from "./Hr";
 import ProjectCard, {ProjectCardProps} from "./ProjectCard";
 import Title from "../elements/Title";
+import RomanianName from "./RomanianName";
+import FontDebugger from "./FontDebugger";
 
 const titleItems = [
   'Senior .NET Developer',
@@ -33,9 +35,8 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
   return (
     <View style={[styles.container]}>
       {!hideHeader && (
-        <>
-          <View style={styles.header}>
-            <Text style={styles.name}>COSMIN VLĂDUȚU</Text>
+        <>          <View style={styles.header}>
+            <RomanianName style={styles.name} />
             <View style={styles.titleContainer}>
               {titleItems.map((titleItem, index) => {
                 return (
@@ -57,11 +58,14 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
         </>
       )}
 
-      <Title style={styles.workExperience}>{workExperienceTitle}</Title>
-
-      {projects.map((project, index) => (
+      {workExperienceTitle && (
+        <Title style={styles.workExperience}>{workExperienceTitle}</Title>
+      )}      {projects.map((project, index) => (
         <ProjectCard key={project.projectName} isLastItem={index === projects.length - 1} {...project} />
       ))}
+      
+      {/* Add font debugger at the bottom of the first page */}
+      {projects.length < 4 && <FontDebugger />}
     </View>
   )
 }

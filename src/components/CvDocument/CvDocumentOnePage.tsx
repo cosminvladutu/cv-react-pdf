@@ -11,8 +11,27 @@ import RightSection from "./RightSection";
 import {enabledProjectsOnePage, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
 
-Font.register({ family: 'Lato', src: '/fonts/Lato/Lato-Regular.ttf', fontStyle: 'normal', fontWeight: 'normal' });
-Font.register({ family: 'Lato', src: '/fonts/Lato/Lato-Black.ttf', fontStyle: 'normal', fontWeight: 'black' });
+// Register all weights of Lato font with proper language support for diacritical characters
+// Use the full absolute path to ensure fonts are properly embedded and Unicode support works
+Font.registerHyphenationCallback(word => [word]);
+
+Font.register({
+  family: 'Lato',
+  fonts: [
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-Regular.ttf`, fontStyle: 'normal', fontWeight: 'normal' },
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-Bold.ttf`, fontStyle: 'normal', fontWeight: 'bold' },
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-Black.ttf`, fontStyle: 'normal', fontWeight: 'black' },
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-Italic.ttf`, fontStyle: 'italic', fontWeight: 'normal' },
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-BoldItalic.ttf`, fontStyle: 'italic', fontWeight: 'bold' },
+    { src: `${process.cwd()}/public/fonts/Lato/Lato-BlackItalic.ttf`, fontStyle: 'italic', fontWeight: 'black' },
+  ],
+  langSystems: ['latn'],
+  unicodeRanges: [
+    'U+0000-00FF', // Latin Basic
+    'U+0100-017F', // Latin Extended-A (includes Romanian diacritics like Ă)
+    'U+0180-024F', // Latin Extended-B (includes Ț and other diacritics)
+  ],
+});
 
 
 // Create styles

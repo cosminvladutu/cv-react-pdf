@@ -29,10 +29,11 @@ const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
   const combinedStyle = style
     ? { ...defaultStylesInternal, ...style}
     : defaultStylesInternal;
-    // Special handling for Romanian diacritical characters
+  
+  // Special handling for Romanian diacritical characters
   const enhancedProps = {...props};
   
-  // If the text contains Romanian diacritical characters, use NotoSans font
+  // If the text contains diacritical characters, use NotoSans font which has better support
   if (typeof props.children === 'string' && /[ĂȚăț]/.test(props.children)) {
     combinedStyle.fontFamily = 'NotoSans';
   }
