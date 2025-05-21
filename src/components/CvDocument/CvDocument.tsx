@@ -7,6 +7,7 @@
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
 import LeftSection from "./LeftSection/LeftSection";
+import { LeftSectionWithCertifications } from "./LeftSection";
 import RightSection from "./RightSection";
 import {enabledProjectsAll, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
@@ -29,14 +30,29 @@ const styles = StyleSheet.create({
 // Create Document Component
 const CvDocument = () => {
   const projects: ProjectCardProps[] = enabledProjectsAll.map(projectName => projectsByName[projectName]);
-
+  
+  // Divide projects between pages
+  const firstPageProjects = projects.slice(0, 3); // First 3 projects on first page
+  const secondPageProjects = projects.slice(3);   // Remaining projects on second page
+  
   return (
     <Document>
-      <Page size="A4" style={styles.page}>
+      {/* First page with standard layout */}
+      <Page size="A4" style={styles.page} wrap={false}>
         <LeftSection/>
         <RightSection
-          projects={projects}
+          projects={firstPageProjects}
           workExperienceTitle="Work Experience"
+        />
+      </Page>
+      
+      {/* Second page with certifications in left section */}
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionWithCertifications/>
+        <RightSection
+          projects={secondPageProjects}
+          workExperienceTitle="Work Experience (continued)"
+          hideHeader={true}
         />
       </Page>
     </Document>

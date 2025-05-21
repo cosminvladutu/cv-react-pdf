@@ -25,31 +25,36 @@ const titleItems = [
 export interface RightSectionProps {
   projects: ProjectCardProps[];
   workExperienceTitle: string;
+  hideHeader?: boolean;
 }
 
-const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle }) => {
+const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle, hideHeader = false }) => {
   return (
     <View style={[styles.container]}>
-      <View style={styles.header}>
-        <Text style={styles.name}>Radu Nemerenco</Text>
-        <View style={styles.titleContainer}>
-          {titleItems.map((titleItem, index) => {
-            return (
-              <View key={titleItem} style={styles.titleItemContainer}>
-                {!!index && <Text style={styles.titleSeparator}>•</Text>}
-                <Text style={styles.titleItem}>{titleItem}</Text>
-              </View>
-            )
-          })}
-        </View>
-      </View>
+      {!hideHeader && (
+        <>
+          <View style={styles.header}>
+            <Text style={styles.name}>Radu Nemerenco</Text>
+            <View style={styles.titleContainer}>
+              {titleItems.map((titleItem, index) => {
+                return (
+                  <View key={titleItem} style={styles.titleItemContainer}>
+                    {!!index && <Text style={styles.titleSeparator}>•</Text>}
+                    <Text style={styles.titleItem}>{titleItem}</Text>
+                  </View>
+                )
+              })}
+            </View>
+          </View>
 
-      <Hr />
+          <Hr />
 
-      <Title style={styles.aboutMeTitle}>About Me</Title>
-      <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work.</Text>
-      <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients’ needs with regards to their software solutions.</Text>
-      <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
+          <Title style={styles.aboutMeTitle}>About Me</Title>
+          <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work.</Text>
+          <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients' needs with regards to their software solutions.</Text>
+          <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
+        </>
+      )}
 
       <Title style={styles.workExperience}>{workExperienceTitle}</Title>
 
