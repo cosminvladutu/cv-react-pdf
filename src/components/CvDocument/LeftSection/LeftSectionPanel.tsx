@@ -1,3 +1,12 @@
+// LeftSectionPanel.tsx
+// This component renders a titled panel for grouping related content in the left section of the CV document.
+//
+// Props:
+// - title: string — The panel's title
+// - children: ReactNode — Content to display inside the panel
+//
+// Usage: Used in LeftSection to group contact info, skills, and education.
+
 import React from "react";
 import {StyleSheet, View} from '@react-pdf/renderer'
 import Text from "../elements/Text";

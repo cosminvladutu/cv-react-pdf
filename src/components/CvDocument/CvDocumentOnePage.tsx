@@ -1,3 +1,9 @@
+// CvDocumentOnePage.tsx
+// This component defines a single-page PDF CV document using @react-pdf/renderer.
+// It composes LeftSection and RightSection, passing a filtered list of projects for compact display.
+//
+// Usage: Used to render a one-page version of the CV.
+
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
 import LeftSection from "./LeftSection/LeftSection";

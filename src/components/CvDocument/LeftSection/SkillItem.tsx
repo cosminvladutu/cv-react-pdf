@@ -1,3 +1,12 @@
+// SkillItem.tsx
+// This component renders a single skill item with its name and years of experience for the CV document.
+//
+// Props:
+// - name: string — Name of the skill
+// - years: number — Years of experience
+//
+// Usage: Used in LeftSection to display a list of skills.
+
 import React from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";
 import Text from "../elements/Text";

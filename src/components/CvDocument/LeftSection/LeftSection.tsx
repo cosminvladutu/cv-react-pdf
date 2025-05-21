@@ -1,3 +1,19 @@
+// LeftSection.tsx
+// This component renders the left section of the CV document, including profile picture, contact information, skills, and education.
+// It uses custom elements and panels for structured display in a PDF format using @react-pdf/renderer.
+//
+// Main sections:
+// - Profile picture
+// - Contact information (phone, email, location, LinkedIn, Skype)
+// - Skills list (with years of experience)
+// - Education details
+//
+// Styling is handled via StyleSheet from @react-pdf/renderer.
+//
+// Props: None (static content)
+//
+// Usage: Used as part of the CvDocument layout.
+
 import {Image, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
 import React from "react";
 import Text from "../elements/Text";
