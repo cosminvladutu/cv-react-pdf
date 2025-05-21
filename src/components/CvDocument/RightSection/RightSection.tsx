@@ -15,7 +15,8 @@ import ProjectCard, {ProjectCardProps} from "./ProjectCard";
 import Title from "../elements/Title";
 
 const titleItems = [
-  'Senior React Fullstack Developer',
+  'Senior .NET Developer',
+  'Leader',
   'Contractor',
   'Freelancer',
 ];
@@ -34,7 +35,7 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
       {!hideHeader && (
         <>
           <View style={styles.header}>
-            <Text style={styles.name}>Radu Nemerenco</Text>
+            <Text style={styles.name}>COSMIN VLĂDUȚU</Text>
             <View style={styles.titleContainer}>
               {titleItems.map((titleItem, index) => {
                 return (

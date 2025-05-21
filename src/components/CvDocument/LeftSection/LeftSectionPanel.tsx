@@ -31,7 +31,7 @@ const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, children}) =>
 
 const styles = StyleSheet.create({
   container: {
-    margin: '8px 10px'
+    margin: '20px 10px'
   },
   heading: {
     paddingBottom: 10,
