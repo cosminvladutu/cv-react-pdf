@@ -1,3 +1,13 @@
+// ContactItem.tsx
+// This component renders a single contact item (icon + text/link) for the CV document.
+//
+// Props:
+// - icon: ReactNode — Icon to display
+// - text: ReactNode — Contact text
+// - link: string (optional) — If provided, wraps text in a clickable link
+//
+// Usage: Used in LeftSection to display contact information.
+
 import React, {ReactNode} from "react";
 import {StyleSheet, View, Link} from "@react-pdf/renderer";
 import Text from "../elements/Text";

@@ -1,3 +1,13 @@
+// data.tsx
+// This file contains the data and configuration for the CV document, including project details and enabled project lists.
+//
+// Exports:
+// - enabledProjectsAll: string[] — All project keys to show in the full CV
+// - enabledProjectsOnePage: string[] — Project keys for the one-page CV
+// - projectsByName: object — Project details keyed by project name, including name, period, title, company, client problem, achievements, and skills
+//
+// Usage: Imported by CvDocument and CvDocumentOnePage to provide project data for rendering.
+
 import React from "react";
 import Text from "./components/CvDocument/elements/Text";
 

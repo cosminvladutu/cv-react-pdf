@@ -1,3 +1,20 @@
+// ProjectCard.tsx
+// This component renders a single project card for the work experience section in the CV document.
+// Displays project name, company, period, title, client problem, achievements, and skills.
+//
+// Props (ProjectCardProps):
+// - projectName: string — Name of the project
+// - from: string — Start date
+// - to: string — End date
+// - title: string — Role/title for the project
+// - company: string (optional) — Company name
+// - clientProblem: ReactNode — Description of the client's problem
+// - achievements: ReactNode[] — List of achievements
+// - skills: string[] — Skills used in the project
+// - isLastItem: boolean (optional) — If true, adjusts timeline line rendering
+//
+// Usage: Used in RightSection to display a list of projects.
+
 import React, {ReactNode} from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";
 import Text from "../elements/Text";

@@ -1,3 +1,12 @@
+// types.ts
+// This file defines TypeScript types and interfaces for the CV document data model.
+//
+// Exports:
+// - Skill: Union type of all possible skill strings
+// - Project: Interface describing the structure of a project entry for the CV
+//
+// Usage: Used for type safety in project data and component props throughout the CV codebase.
+
 import {ReactNode} from "react";
 
 export type Skill = 'JavaScript'

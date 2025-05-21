@@ -1,3 +1,10 @@
+// Hr.tsx
+// This component renders a horizontal rule (divider) for section separation in the CV document.
+//
+// Props: None
+//
+// Usage: Used to visually separate sections in the PDF layout.
+
 import React from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";
 

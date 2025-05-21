@@ -1,3 +1,11 @@
+// Title.tsx
+// This component renders a styled title text for the CV document using @react-pdf/renderer.
+// It extends the custom Text component and applies uppercase transformation and font size styling.
+//
+// Props: Inherits all props from the custom Text component, plus optional style overrides.
+//
+// Usage: Used for section titles in the PDF layout.
+
 import {StyleSheet} from '@react-pdf/renderer';
 import type {Style} from '@react-pdf/types';
 import React from "react";

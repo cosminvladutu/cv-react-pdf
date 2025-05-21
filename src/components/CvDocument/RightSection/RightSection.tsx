@@ -1,3 +1,12 @@
+// RightSection.tsx
+// This component renders the right section of the CV document, including the user's name, titles, about section, and work experience/projects.
+//
+// Props:
+// - projects: Array of project objects to display (see ProjectCardProps)
+// - workExperienceTitle: Title for the work experience section
+//
+// Usage: Used as part of the CvDocument layout to display main content and project history.
+
 import {StyleSheet, View} from "@react-pdf/renderer";
 import React from "react";
 import Text from "../elements/Text";
