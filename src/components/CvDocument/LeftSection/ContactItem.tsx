@@ -10,13 +10,13 @@
 
 import React, {ReactNode} from "react";
 import {StyleSheet, View, Link} from "@react-pdf/renderer";
-import Text from "../elements/Text";
+import { Text, DiacriticalText } from "../elements";
+import { hasDiacriticalChars } from "../../../utils/diacritics";
 
 interface ContactItemProps {
   icon: ReactNode;
   text?: ReactNode;
   link?: string;
-  hasDiacritics?: boolean;
   children?: ReactNode;
 }
 
@@ -24,25 +24,28 @@ const ContactItem: React.FC<ContactItemProps> = ({
   icon,
   text,
   link,
-  hasDiacritics = false,
   children,
-}) => {  // For text with diacritical characters, use special handling
+}) => {
+  // Extract diacritical text detection to a reusable function
+  const isDiacriticalText = (content: any): boolean => {
+    return (typeof content === 'string' && hasDiacriticalChars(content));
+  };
+
   const renderText = () => {
     if (children) {
       return children;
     }
     
-    if (hasDiacritics && typeof text === 'string') {
-      return <Text contrast style={{ fontFamily: 'NotoSans' }}>{text}</Text>;
+    if (isDiacriticalText(text) && typeof text === 'string') {
+      return <DiacriticalText contrast>{text}</DiacriticalText>;
     }
+    
     return <Text contrast>{text}</Text>;
-  };
-
-  const textElementToRender = link && text
+  };  const textElementToRender = link && text
     ? (
       <Link src={link}>
-        {hasDiacritics 
-          ? <Text contrast style={{ ...styles.linkText, fontFamily: 'NotoSans' }}>{text}</Text>
+        {isDiacriticalText(text) && typeof text === 'string'
+          ? <DiacriticalText contrast style={styles.linkText}>{text}</DiacriticalText>
           : <Text contrast style={styles.linkText}>{text}</Text>
         }
       </Link>
@@ -70,10 +73,12 @@ const styles = StyleSheet.create({
     height: 10,
     alignItems: 'center',
     marginRight: 10,
-  },
-  linkText: {
+  },  linkText: {
     // textDecoration: 'none', doesn't work. The line should not be displayed
     textDecoration: 'line-through underline',
+  },
+  text: {
+    // Default text style
   }
 })
 
