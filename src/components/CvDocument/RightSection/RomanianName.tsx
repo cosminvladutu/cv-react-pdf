@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 0, // Removed margin to align with other adjustments
   },
   name: {
     fontFamily: 'Lato',
