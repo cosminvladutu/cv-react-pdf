@@ -13,7 +13,7 @@ import Text from "../elements/Text";
 import Hr from "./Hr";
 import ProjectCard, {ProjectCardProps} from "./ProjectCard";
 import Title from "../elements/Title";
-import RomanianName from "./RomanianName";
+import { DiacriticalText } from "../elements";
 
 const titleItems = [
   'Senior .NET Developer',
@@ -35,7 +35,11 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
     <View style={[styles.container]}>
       {!hideHeader && (
         <>          <View style={styles.header}>
-            <RomanianName style={styles.name} />
+            <View style={styles.nameContainer}>
+              <DiacriticalText style={styles.name}>
+                COSMIN VLĂDUȚU
+              </DiacriticalText>
+            </View>
             <View style={styles.titleContainer}>
               {titleItems.map((titleItem, index) => {
                 return (
@@ -71,9 +75,12 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 10, // Reduced from 20 to 10 to move everything higher
     flex: 1
-  },
-  header: {
+  },  header: {
     alignItems: 'center'
+  },
+  nameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   name: {
     fontSize: 32,
