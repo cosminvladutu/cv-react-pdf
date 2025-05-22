@@ -18,7 +18,7 @@
 
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
-import LeftSection from "./LeftSection/LeftSection";
+import { LeftSectionOnePage } from "./LeftSection";
 import RightSection from "./RightSection";
 import {enabledProjectsOnePage, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
@@ -64,12 +64,10 @@ const CvDocumentOnePage = () => {
   const projects: ProjectCardProps[] = enabledProjectsOnePage.map(projectName => ({
     ...projectsByName[projectName],
     achievements: projectsByName[projectName].achievements.slice(0, 2),
-  }));
-
-  return (
+  }));  return (
     <Document>
-      <Page size="A4" style={styles.page}>
-        <LeftSection />
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionOnePage />
         <RightSection
           projects={projects}
           workExperienceTitle="Most Relevant Work Experience"
