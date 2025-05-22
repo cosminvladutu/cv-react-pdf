@@ -5,12 +5,13 @@ import {StyleSheet, View} from "@react-pdf/renderer";
 import React from "react";
 import LeftSectionPanel from "./LeftSectionPanel";
 import CertificationItem from "./CertificationItem";
+import BlogContributionItem from "./BlogContributionItem";
 
 // Define the component as a named function component (React.FC)
 const LeftSectionWithCertifications: React.FC = () => {
   return (
     <View style={[styles.container]}>
-      {/* Only include the Certifications section */}
+      {/* Certifications section */}
       <LeftSectionPanel title="CERTIFICATIONS">
         <CertificationItem name="Microsoft Most Valuable Profesional" date="Mar 2025" />
         <CertificationItem name="AI for Product Management" date="Apr 2024" />
@@ -25,9 +26,15 @@ const LeftSectionWithCertifications: React.FC = () => {
         <CertificationItem name="MCSD: App Builder" date="Nov 2017" />
         <CertificationItem name="70-486 Developing ASP.NET MVC Web Applications" date="Oct 2016" />
         <CertificationItem name="Constructive Feedback" date="Oct 2015" />
-        <CertificationItem name="Belbin Team Roles" date="Jun 2015" />
-      </LeftSectionPanel>
-    </View>
+        <CertificationItem name="Belbin Team Roles" date="Jun 2015" />      </LeftSectionPanel>
+      
+      {/* Blog Contributions section */}
+      <LeftSectionPanel title="CONTRIBUTIONS TO SOFTWARE BLOGS">
+        <BlogContributionItem url="https://blog.devgenius.io/" />
+        <BlogContributionItem url="https://awstip.com/" />
+        <BlogContributionItem url="https://bootcamp.uxdesign.cc/" />
+        <BlogContributionItem url="https://towardsdev.com/" />
+      </LeftSectionPanel></View>
   )
 }
 

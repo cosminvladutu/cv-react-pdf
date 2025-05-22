@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textTransform: 'uppercase',
     fontWeight: 'bold',
+    textAlign: 'left', // Explicitly set left alignment to override default justify
   }
 });
 
