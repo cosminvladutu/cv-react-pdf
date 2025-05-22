@@ -55,8 +55,8 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
           <Hr />
 
           <Title style={styles.aboutMeTitle}>About Me</Title>
-          <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work.</Text>
-          <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients' needs with regards to their software solutions.</Text>
+          <Text style={styles.aboutMeDescription}>I am a Microsoft MVP and certified (MCSD and Azure) Senior .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>14+ years of experience</Text>, only interested in remote work.</Text>
+          <Text style={styles.aboutMeDescription}>I assist clients in accomplishing their objectives by crafting, architecting, and executing clean and resilient software solutions while also assembling, nurturing and leading high-performing teams.</Text>
           <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
         </>
       )}
