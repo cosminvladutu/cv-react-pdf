@@ -1,19 +1,28 @@
 // ProjectCard.tsx
 // This component renders a single project card for the work experience section in the CV document.
 // Displays project name, company, period, title, client problem, achievements, and skills.
+// Each card includes a timeline visualization with a vertical line and markers.
 //
 // Props (ProjectCardProps):
-// - projectName: string — Name of the project
-// - from: string — Start date
-// - to: string — End date
-// - title: string — Role/title for the project
-// - company: string (optional) — Company name
+// - projectName: string — Name of the project (displayed in cyan color)
+// - from: string — Start date of the project
+// - to: string — End date of the project
+// - title: string — Role/title for the project (displayed prominently)
+// - company: string (optional) — Company name (displayed alongside project name)
 // - clientProblem: ReactNode — Description of the client's problem
-// - achievements: ReactNode[] — List of achievements
-// - skills: string[] — Skills used in the project
+// - achievements: ReactNode[] — List of achievements with cyan bullet points
+// - skills: string[] — Skills used in the project (comma-separated list)
 // - isLastItem: boolean (optional) — If true, adjusts timeline line rendering
+// - isLastPage: boolean (optional) — If true, adds extra bottom padding
 //
-// Usage: Used in RightSection to display a list of projects.
+// Visual styling:
+// - Timeline with cyan vertical line (#42C7E5) and circular markers
+// - Project name and company in cyan (#42C7E5) and bold
+// - Bulleted list for achievements with cyan bullets
+// - Proper spacing between sections and consistent typography
+// - Special handling for last items to prevent visual cutoff
+//
+// Usage: Used in RightSection to display a list of projects with consistent styling and layout.
 
 import React, {ReactNode} from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";

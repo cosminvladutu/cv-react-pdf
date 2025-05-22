@@ -1,16 +1,31 @@
 /**
- * Utilities for handling Romanian diacritical characters
+ * diacritics.ts
+ * Utilities for handling Romanian diacritical characters in PDF documents.
+ * 
+ * This module provides helper functions for detecting and processing Romanian
+ * diacritical characters (like Ă, Ș, Ț) to ensure proper display in PDF documents.
+ * 
+ * The approach splits text into segments with and without diacritical characters,
+ * allowing the PDF renderer to apply the appropriate font only where needed.
  */
 
 /**
- * Romanian diacritical characters
+ * Romanian diacritical characters that require special font handling
  */
 export const ROMANIAN_DIACRITICAL_CHARS = ['ă', 'Ă', 'â', 'Â', 'î', 'Î', 'ș', 'Ș', 'ț', 'Ț'];
 
 /**
  * Checks if a string contains Romanian diacritical characters
+ * 
  * @param text The text to check
  * @returns True if the text contains at least one Romanian diacritical character
+ * 
+ * Usage:
+ * ```
+ * if (hasDiacriticalChars("Iași, România")) {
+ *   // Use special handling
+ * }
+ * ```
  */
 export const hasDiacriticalChars = (text: string): boolean => {
   if (!text) return false;
@@ -19,8 +34,19 @@ export const hasDiacriticalChars = (text: string): boolean => {
 
 /**
  * Splits a string into parts based on whether each character is a diacritical character
+ * This enables mixed-font rendering where only the diacritical portions use the special font.
+ * 
  * @param text The text to split
- * @returns An array of { text, isDiacritical } parts
+ * @returns An array of { text, isDiacritical } parts that can be rendered with different fonts
+ * 
+ * Example output for "VLĂDUȚU":
+ * [
+ *   { text: "VL", isDiacritical: false },
+ *   { text: "Ă", isDiacritical: true },
+ *   { text: "DU", isDiacritical: false },
+ *   { text: "Ț", isDiacritical: true },
+ *   { text: "U", isDiacritical: false }
+ * ]
  */
 export const splitByDiacriticals = (text: string): Array<{ text: string, isDiacritical: boolean }> => {
   if (!text) return [];

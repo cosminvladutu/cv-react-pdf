@@ -1,10 +1,21 @@
 // data.tsx
 // This file contains the data and configuration for the CV document, including project details and enabled project lists.
+// It serves as the central data store that gets rendered across the multiple pages of the PDF.
 //
 // Exports:
-// - enabledProjectsAll: string[] — All project keys to show in the full CV
-// - enabledProjectsOnePage: string[] — Project keys for the one-page CV
-// - projectsByName: object — Project details keyed by project name, including name, period, title, company, client problem, achievements, and skills
+// - enabledProjectsAll: string[] — All project keys to show in the full multi-page CV
+// - enabledProjectsOnePage: string[] — Project keys for the abbreviated one-page CV
+// - projectsByName: object — Project details keyed by project name, including:
+//   - projectName: string — Name of the project
+//   - from/to: string — Start and end dates (displayed in timeline)
+//   - title: string — Role/position title
+//   - company: string (optional) — Company name where the project was done
+//   - clientProblem: ReactNode — Description of the client's problem/needs
+//   - achievements: ReactNode[] — List of accomplishments and contributions
+//   - skills: string[] — Technical skills used in the project
+//
+// Each project entry is fully typed and contains structured information that
+// will be rendered by the ProjectCard component in the PDF layout.
 //
 // Usage: Imported by CvDocument and CvDocumentOnePage to provide project data for rendering.
 

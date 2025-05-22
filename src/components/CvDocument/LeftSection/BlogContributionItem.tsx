@@ -1,10 +1,18 @@
 // BlogContributionItem.tsx
 // This component renders a single blog contribution item for the CV document.
+// It handles proper text wrapping for long URLs across multiple lines.
 //
 // Props:
 // - url: string — URL of the blog where contributions were made
 //
-// Usage: Used in LeftSection to display a list of blog contributions.
+// Visual features:
+// - Smart URL text wrapping with breaks at logical points (slashes and dots)
+// - Left-aligned text for better URL readability
+// - Slightly smaller font size (9pt) optimized for URLs
+// - Proper contrast for dark background (using white text)
+// - Line height adjustment for improved readability of multi-line URLs
+//
+// Usage: Used in LeftSectionWithCertifications to display a list of blog contributions.
 
 import React from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";

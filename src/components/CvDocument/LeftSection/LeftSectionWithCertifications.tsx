@@ -1,5 +1,14 @@
 // LeftSectionWithCertifications.tsx
-// This component renders only the certifications section for the second page of the full CV.
+// This component renders the certifications and blog contributions sections for the second page of the full CV.
+// It maintains the same styling and layout approach as the main LeftSection but with different content.
+//
+// Key features:
+// - Displays certifications with their dates in a consistent format
+// - Shows blog contributions with proper URL formatting
+// - Maintains the same 30% width and gray background as other left sections
+// - Uses the same cyan color (#42C7E5) for section titles
+//
+// Usage: Used on the second page of the CV document to provide continuity while showing different content.
 
 import {StyleSheet, View} from "@react-pdf/renderer";
 import React from "react";

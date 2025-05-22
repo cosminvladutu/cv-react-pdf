@@ -3,12 +3,17 @@
 // It uses custom elements and panels for structured display in a PDF format using @react-pdf/renderer.
 //
 // Main sections:
-// - Profile picture
-// - Contact information (phone, email, location, LinkedIn, Skype)
-// - Skills list (with years of experience)
-// - Education details
+// - Profile picture (with rounded border and proper positioning)
+// - Contact information (phone, email, location, LinkedIn, Skype, etc., each with custom SVG icons)
+// - Skills list (with years of experience displayed in a tabular format)
+// - Education details (with proper handling of diacritical characters)
 //
-// Styling is handled via StyleSheet from @react-pdf/renderer.
+// Styling:
+// - Dark gray background (#434244) provides contrast with the right section
+// - Width is set to 30% of the page width
+// - SVG icons and content are styled for consistent alignment and spacing
+// - Special handling for diacritical characters (Romanian text) using DiacriticalText component
+// - Title elements colored with #42C7E5 for visual hierarchy
 //
 // Props: None (static content)
 //

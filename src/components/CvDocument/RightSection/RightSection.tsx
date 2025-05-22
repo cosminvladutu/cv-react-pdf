@@ -1,9 +1,20 @@
 // RightSection.tsx
 // This component renders the right section of the CV document, including the user's name, titles, about section, and work experience/projects.
+// It takes up 70% of the page width and contains the main content of the CV.
 //
 // Props:
 // - projects: Array of project objects to display (see ProjectCardProps)
-// - workExperienceTitle: Title for the work experience section
+// - workExperienceTitle: String title for the work experience section
+// - hideHeader: Boolean (optional) - If true, hides the name/title/about section (used on pages after the first)
+// - isLastPage: Boolean (optional) - If true, applies special styling for the last page
+//
+// Visual features:
+// - Header with name and professional titles (displayed only on first page)
+// - About Me section with professional summary (displayed only on first page)
+// - Work Experience section with project cards
+// - Consistent padding and spacing throughout
+// - Special handling for diacritical characters in the name
+// - Responsive layout that works with the project distribution across pages
 //
 // Usage: Used as part of the CvDocument layout to display main content and project history.
 

@@ -2,9 +2,20 @@ import React from 'react';
 import { Text, StyleSheet, View } from '@react-pdf/renderer';
 
 /**
- * A component that renders multiple versions of the Romanian name using different font approaches
- * This is helpful for debugging font issues - it will appear at the bottom of the PDF
- * and can be removed once the appropriate solution is found
+ * FontDebugger.tsx
+ * 
+ * A component that renders multiple versions of Romanian diacritical characters using different font approaches.
+ * This is a development/debugging tool to test and compare different solutions for rendering 
+ * Romanian special characters (Ă, Ț) in the PDF document.
+ * 
+ * Key features:
+ * - Displays the same text with different font families (Lato, OpenSans, NotoSans)
+ * - Tests Unicode code point approach for special characters
+ * - Tests mixed-font approach (different font for each diacritical character)
+ * 
+ * Usage: Include this component at the bottom of a page during development to
+ * debug font rendering issues with Romanian diacritical characters. Can be removed
+ * in production once the appropriate font solution is implemented.
  */
 const FontDebugger: React.FC = () => {  return (
     <View style={styles.container}>
