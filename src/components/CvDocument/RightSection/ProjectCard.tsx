@@ -64,13 +64,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {!!company && <Text color="#42C7E5" isBold> | {company}</Text>}
           </Text>
 
-          <Text style={styles.clientProblem}>{clientProblem}</Text>
-
-          <View style={styles.achievementsContainer}>
+          <Text style={styles.clientProblem}>{clientProblem}</Text>          <View style={styles.achievementsContainer}>
             {achievements.map((achievement, key) => (
-              <Text key={key} style={styles.achievement}><Text style={styles.bulletPoint}>{'• '}</Text>{achievement}</Text>
+              <Text key={key} style={styles.achievement}><Text style={styles.bulletPoint} color="#42C7E5">{'• '}</Text>{achievement}</Text>
             ))}
-          </View>          <View style={styles.skillsContainer}>
+          </View><View style={styles.skillsContainer}>
             <Text style={styles.skill}>Skills: {skills.join(', ')}</Text>
           </View>
           {/* Add bottom padding for the last item to prevent trimming */}
@@ -96,20 +94,19 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingBottom: 8,
     paddingTop: 12
-  },
-  timelineLine: {
+  },  timelineLine: {
     position: 'absolute',
     left: 0,
     top: 16,
     bottom: -16,
     width: 1,
-    backgroundColor: '#d4d4d4',
+    backgroundColor: '#42C7E5',
   },
   timelineMarker: {
     position: 'absolute',
     width: 9,
     height: 9,
-    backgroundColor: 'rgb(74, 74, 74)',
+    backgroundColor: '#42C7E5',
     borderRadius: 9,
     left: -4,
     top: 16,
