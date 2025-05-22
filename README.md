@@ -24,7 +24,7 @@ The application is organized into these main sections:
   - `/RightSection` - Main content components (projects, work experience)
   - `/elements` - Shared UI elements (text, titles with proper font handling)
 - `/src/utils` - Utility functions (e.g., handling diacritical characters)
-- `/public/fonts` - Font files for proper PDF rendering
+- `/public/fonts` - Font files for proper PDF rendering with special character support
 
 ## Key Technical Solutions
 
