@@ -29,6 +29,7 @@ export interface ProjectCardProps {
   achievements: ReactNode[];
   skills: string[],
   isLastItem?: boolean;
+  isLastPage?: boolean;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -41,15 +42,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   achievements,
   skills,
   isLastItem,
+  isLastPage,
 }) => {
   const rightColumnStyle = styles.rightColumn //isLastItem
     // ? styles.rightColumn
     // : {...styles.rightColumn, paddingBottom: 16};
-
   const timelineLineStyle = isLastItem
-    ? {...styles.timelineLine, bottom: 5}
+    ? {...styles.timelineLine, bottom: 5, minHeight: 20} // Ensure minimum height for last item
     : styles.timelineLine
-
   return (
     <View style={styles.container} wrap={false}>
       <View style={rightColumnStyle}>
@@ -71,11 +71,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             {achievements.map((achievement, key) => (
               <Text key={key} style={styles.achievement}><Text style={styles.bulletPoint}>{'• '}</Text>{achievement}</Text>
             ))}
-          </View>
-
-          <View style={styles.skillsContainer}>
+          </View>          <View style={styles.skillsContainer}>
             <Text style={styles.skill}>Skills: {skills.join(', ')}</Text>
           </View>
+          {/* Add bottom padding for the last item to prevent trimming */}
+          {isLastItem && <View style={{ marginBottom: isLastPage ? 60 : 40 }} />}
         </View>
       </View>
     </View>

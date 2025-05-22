@@ -28,11 +28,14 @@ export interface RightSectionProps {
   projects: ProjectCardProps[];
   workExperienceTitle: string;
   hideHeader?: boolean;
+  isLastPage?: boolean;
 }
 
-const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle, hideHeader = false }) => {
+const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle, hideHeader = false, isLastPage = false }) => {
+  const containerStyle = isLastPage ? [styles.container, styles.lastPageContainer] : styles.container;
+  
   return (
-    <View style={[styles.container]}>
+    <View style={containerStyle}>
       {!hideHeader && (
         <>          <View style={styles.header}>
             <View style={styles.nameContainer}>
@@ -63,8 +66,15 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
 
       {!hideHeader && workExperienceTitle && (
         <Title style={styles.workExperience}>{workExperienceTitle}</Title>
-      )}      {projects.map((project, index) => (
-        <ProjectCard key={project.projectName} isLastItem={index === projects.length - 1} {...project} />
+      )}
+      
+      {projects.map((project, index) => (
+        <ProjectCard 
+          key={project.projectName} 
+          isLastItem={index === projects.length - 1} 
+          {...project} 
+          isLastPage={isLastPage && index === projects.length - 1}
+        />
       ))}
     </View>
   )
@@ -105,8 +115,7 @@ const styles = StyleSheet.create({
 
   aboutMeTitle: {
     marginBottom: 5
-  },
-  aboutMeDescription: {
+  },  aboutMeDescription: {
     opacity: 0.7,
     marginTop: 2,
     marginBottom: 3,
@@ -114,6 +123,12 @@ const styles = StyleSheet.create({
 
   workExperience: {
     marginTop: 15,
+  },
+    lastPageContainer: {
+    minHeight: '100%', // Ensure it takes the full height of the page
+    paddingBottom: 50, // Add extra padding at the bottom for the last page
+    display: 'flex',
+    flexDirection: 'column',
   },
 
 })

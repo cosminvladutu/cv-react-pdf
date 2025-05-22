@@ -52,6 +52,10 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     backgroundColor: '#FFF',
+    height: '100%', // Ensure consistent height for all pages
+  },
+  fullHeight: {
+    height: '100%',
   },
   section: {
     padding: 10
@@ -87,7 +91,9 @@ const CvDocument = () => {
           workExperienceTitle=""
           hideHeader={true}
         />
-      </Page>      {/* Third page with more projects */}
+      </Page>
+
+      {/* Third page with more projects */}
       <Page size="A4" style={styles.page} wrap={false}>
         <LeftSectionEmpty/>
         <RightSection
@@ -104,6 +110,7 @@ const CvDocument = () => {
           projects={fourthPageProjects}
           workExperienceTitle=""
           hideHeader={true}
+          isLastPage={true}
         />
       </Page>
     </Document>

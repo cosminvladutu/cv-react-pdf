@@ -42,11 +42,16 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to my CV website
-        </h1>
-
-        {!!cvDocumentElement && (
+        </h1>        {!!cvDocumentElement && (
           <div style={{position: 'fixed', width: '100vw', height: '100vh'}}>
-            <PDFViewer style={{position: 'absolute', width: '100vw', height: '100vh'}}>
+            <PDFViewer 
+              style={{
+                position: 'absolute',
+                width: '100vw',
+                height: '100vh',
+              }}
+              showToolbar={true}
+            >
               {cvDocumentElement}
             </PDFViewer>
             <a
