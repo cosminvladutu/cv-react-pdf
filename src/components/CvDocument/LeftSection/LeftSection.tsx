@@ -17,6 +17,7 @@
 import {Image, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
 import React from "react";
 import Text from "../elements/Text";
+import { DiacriticalText } from "../elements";
 import LeftSectionPanel from "./LeftSectionPanel";
 import SkillItem from "./SkillItem";
 import ContactItem from "./ContactItem";
@@ -116,8 +117,8 @@ const LeftSection = () => {
         <SkillItem years={4} name="CosmosDB" />
         <SkillItem years={4} name="Distributed Systems" />
         <SkillItem years={4} name="Serverless" />
+        <SkillItem years={4} name="ARM Templates & Bicep" />
         <SkillItem years={3} name="SonarQube" />
-        <SkillItem years={3} name="ARM Templates & Bicep" />
         <SkillItem years={2} name="Windows Services" />
         <SkillItem years={2} name="IdentityServer" />
         <SkillItem years={2} name="Polly" />
@@ -125,12 +126,10 @@ const LeftSection = () => {
         <SkillItem years={2} name="ServiceBus" />
         <SkillItem years={2} name="Angular" />
         <SkillItem years={2} name="React" />
-      </LeftSectionPanel>
-
-      <LeftSectionPanel title="Education">
+      </LeftSectionPanel>      <LeftSectionPanel title="Education">
         <Text contrast isBold>Alexandru Ioan-Cuza University</Text>
         <Text contrast>Bachelor in Computer Science</Text>
-        <Text contrast>Iași, 2007 - 2010</Text>
+        <DiacriticalText contrast>Iași, România, 2007 - 2010</DiacriticalText>
       </LeftSectionPanel>
     </View>
   )

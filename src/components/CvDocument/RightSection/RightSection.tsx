@@ -61,7 +61,7 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
         </>
       )}
 
-      {workExperienceTitle && (
+      {!hideHeader && workExperienceTitle && (
         <Title style={styles.workExperience}>{workExperienceTitle}</Title>
       )}      {projects.map((project, index) => (
         <ProjectCard key={project.projectName} isLastItem={index === projects.length - 1} {...project} />

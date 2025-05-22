@@ -77,7 +77,8 @@ const CvDocument = () => {
         />
       </Page>
       
-      {/* Second page with certifications in left section */}      <Page size="A4" style={styles.page} wrap={false}>
+      {/* Second page with certifications in left section */}      
+      <Page size="A4" style={styles.page} wrap={false}>
         <LeftSectionWithCertifications/>
         <RightSection
           projects={secondPageProjects}
