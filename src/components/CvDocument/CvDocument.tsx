@@ -69,8 +69,8 @@ const CvDocument = () => {
   // Divide projects between pages - distribute more evenly across multiple A4 pages
   const firstPageProjects = projects.slice(0, 3); // First 3 projects on first page
   const secondPageProjects = projects.slice(3, 6); // Next 3 projects on second page
-  const thirdPageProjects = projects.slice(6, 9); // Next 3 projects on third page
-  const fourthPageProjects = projects.slice(9); // Remaining projects on fourth page
+  const thirdPageProjects = projects.slice(6, 10); // Next 3 projects on third page
+  const fourthPageProjects = projects.slice(10); // Remaining projects on fourth page
   
   return (
     <Document>

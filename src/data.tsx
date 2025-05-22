@@ -148,7 +148,7 @@ export const projectsByName = {
     projectName: 'WOZ',
     from: 'Aug 2017',
     to: 'Feb 2018',
-    title: '.NET Backend developer (shadow leading)',
+    title: '.NET Backend developer (Shadow leading)',
     company: 'Centric IT Solutions',
     clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the municipalities and needed a product so that the taxes for waterboards could be easily calculated and sent both to the paying people and the government.',
     achievements: [
