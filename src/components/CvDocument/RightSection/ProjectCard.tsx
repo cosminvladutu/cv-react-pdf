@@ -58,11 +58,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <View style={styles.rightHeading}>
           <Text style={styles.title}>{title} </Text>
           <Text style={styles.period}>{from} - {to}</Text>
-        </View>
-        <View style={styles.content}>
-          <Text style={styles.projectName}>
+        </View>        <View style={styles.content}>
+          <Text style={styles.projectName} color="#42C7E5" isBold>
             {projectName}
-            {!!company && ` | ${company}`}
+            {!!company && <Text color="#42C7E5" isBold> | {company}</Text>}
           </Text>
 
           <Text style={styles.clientProblem}>{clientProblem}</Text>

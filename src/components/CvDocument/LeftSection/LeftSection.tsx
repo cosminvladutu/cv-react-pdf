@@ -24,11 +24,10 @@ import ContactItem from "./ContactItem";
 
 const LeftSection = () => {
   return (
-    <View style={[styles.container]}>
-      <View style={styles.profilePictureContainer}>
+    <View style={[styles.container]}>      <View style={styles.profilePictureContainer}>
         <Image style={styles.profilePicture} src="/images/DSC_8292 test.jpg" />
       </View>
-      <LeftSectionPanel title={'Contact'}>
+      <LeftSectionPanel title={'Contact'} titleColor="#42C7E5">
         <ContactItem
           icon={(
             <Svg width="10px" height="10px">
@@ -100,10 +99,9 @@ const LeftSection = () => {
             )}
             text={'@cosmin-vladutu'}
             link={'https://medium.com/@cosmin-vladutu'}
-        />
-      </LeftSectionPanel>
+        />      </LeftSectionPanel>
 
-      <LeftSectionPanel title="Skills">
+      <LeftSectionPanel title="Skills" titleColor="#42C7E5">
         <SkillItem years={14} name="C#" />
         <SkillItem years={14} name=".NET" />
         <SkillItem years={13} name="SQL Server" />
@@ -126,7 +124,7 @@ const LeftSection = () => {
         <SkillItem years={2} name="ServiceBus" />
         <SkillItem years={2} name="Angular" />
         <SkillItem years={2} name="React" />
-      </LeftSectionPanel>      <LeftSectionPanel title="Education">
+      </LeftSectionPanel>      <LeftSectionPanel title="Education" titleColor="#42C7E5">
         <Text contrast isBold>Alexandru Ioan-Cuza University</Text>
         <Text contrast>Bachelor in Computer Science</Text>
         <DiacriticalText contrast>Iași, România, 2007 - 2010</DiacriticalText>

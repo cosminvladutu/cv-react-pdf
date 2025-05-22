@@ -10,15 +10,18 @@ import React from "react";
 interface TextProps {
   contrast?: boolean;
   isBold?: boolean;
+  color?: string;
   style?: any;
   children?: React.ReactNode;
   [key: string]: any;
 }
 
-const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
+const Text: React.FC<TextProps> = ({ contrast, isBold, color, style, ...props}) => {
   const defaultStylesInternal: Style = {...defaultStyle.text};
 
-  if (contrast) {
+  if (color) {
+    defaultStylesInternal.color = color;
+  } else if (contrast) {
     defaultStylesInternal.color = '#FFF';
   }
 

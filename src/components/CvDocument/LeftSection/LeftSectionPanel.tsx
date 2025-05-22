@@ -13,14 +13,15 @@ import Text from "../elements/Text";
 import Title from "../elements/Title";
 
 interface LeftSectionPanelProps {
-  title: string
+  title: string;
+  titleColor?: string;
 }
 
-const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, children}) => {
+const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, titleColor, children}) => {
   return (
     <View style={styles.container}>
       <View style={styles.heading}>
-        <Title contrast>{title}</Title>
+        <Title contrast color={titleColor}>{title}</Title>
       </View>
       <View style={styles.content}>
         {children}

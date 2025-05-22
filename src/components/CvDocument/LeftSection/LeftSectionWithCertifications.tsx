@@ -8,11 +8,10 @@ import CertificationItem from "./CertificationItem";
 import BlogContributionItem from "./BlogContributionItem";
 
 // Define the component as a named function component (React.FC)
-const LeftSectionWithCertifications: React.FC = () => {
-  return (
+const LeftSectionWithCertifications: React.FC = () => {  return (
     <View style={[styles.container]}>
       {/* Certifications section */}
-      <LeftSectionPanel title="CERTIFICATIONS">
+      <LeftSectionPanel title="CERTIFICATIONS" titleColor="#42C7E5">
         <CertificationItem name="Microsoft Most Valuable Profesional" date="Mar 2025" />
         <CertificationItem name="AI for Product Management" date="Apr 2024" />
         <CertificationItem name="Product Management Basics Certification" date="Apr 2024" />
@@ -26,10 +25,9 @@ const LeftSectionWithCertifications: React.FC = () => {
         <CertificationItem name="MCSD: App Builder" date="Nov 2017" />
         <CertificationItem name="70-486 Developing ASP.NET MVC Web Applications" date="Oct 2016" />
         <CertificationItem name="Constructive Feedback" date="Oct 2015" />
-        <CertificationItem name="Belbin Team Roles" date="Jun 2015" />      </LeftSectionPanel>
-      
+        <CertificationItem name="Belbin Team Roles" date="Jun 2015" />      </LeftSectionPanel>      
       {/* Blog Contributions section */}
-      <LeftSectionPanel title="CONTRIBUTIONS TO SOFTWARE BLOGS">
+      <LeftSectionPanel title="CONTRIBUTIONS TO SOFTWARE BLOGS" titleColor="#42C7E5">
         <BlogContributionItem url="https://blog.devgenius.io/" />
         <BlogContributionItem url="https://awstip.com/" />
         <BlogContributionItem url="https://bootcamp.uxdesign.cc/" />

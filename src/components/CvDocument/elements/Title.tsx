@@ -8,18 +8,20 @@ import Text from "./Text";
 
 interface TitleProps {
   contrast?: boolean;
+  color?: string;
   style?: any;
   children?: React.ReactNode;
   [key: string]: any;
 }
 
-const Title: React.FC<TitleProps> = ({ contrast, style, ...props}) => {
+const Title: React.FC<TitleProps> = ({ contrast, color, style, ...props}) => {
   const combinedStyles = style ? {...styles.title, ...style} : styles.title;
   
   return (
     <Text 
       style={combinedStyles} 
-      contrast={contrast} 
+      contrast={contrast}
+      color={color}
       {...props} 
     />
   );
