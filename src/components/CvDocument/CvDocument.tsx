@@ -7,7 +7,7 @@
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
 import LeftSection from "./LeftSection/LeftSection";
-import { LeftSectionWithCertifications } from "./LeftSection";
+import { LeftSectionWithCertifications, LeftSectionEmpty } from "./LeftSection";
 import RightSection from "./RightSection";
 import {enabledProjectsAll, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
@@ -62,9 +62,11 @@ const styles = StyleSheet.create({
 const CvDocument = () => {
   const projects: ProjectCardProps[] = enabledProjectsAll.map(projectName => projectsByName[projectName]);
   
-  // Divide projects between pages
+  // Divide projects between pages - distribute more evenly across multiple A4 pages
   const firstPageProjects = projects.slice(0, 3); // First 3 projects on first page
-  const secondPageProjects = projects.slice(3);   // Remaining projects on second page
+  const secondPageProjects = projects.slice(3, 6); // Next 3 projects on second page
+  const thirdPageProjects = projects.slice(6, 9); // Next 3 projects on third page
+  const fourthPageProjects = projects.slice(9); // Remaining projects on fourth page
   
   return (
     <Document>
@@ -82,6 +84,24 @@ const CvDocument = () => {
         <LeftSectionWithCertifications/>
         <RightSection
           projects={secondPageProjects}
+          workExperienceTitle=""
+          hideHeader={true}
+        />
+      </Page>      {/* Third page with more projects */}
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionEmpty/>
+        <RightSection
+          projects={thirdPageProjects}
+          workExperienceTitle=""
+          hideHeader={true}
+        />
+      </Page>
+
+      {/* Fourth page with remaining projects */}
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionEmpty/>
+        <RightSection
+          projects={fourthPageProjects}
           workExperienceTitle=""
           hideHeader={true}
         />
