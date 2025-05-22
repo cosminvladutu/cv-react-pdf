@@ -179,7 +179,7 @@ export const projectsByName = {
     title: '.NET Fullstack developer',
     clientProblem: 'The client, one of the top 3 software insurance comparison companies from the UK, was struggling to increase its conversion rate from leads to customers due to an immature product.',
     achievements: [
-      <><Text isBold>ncreased the NET Promoter Score from 7 to 9</Text> by implementing multiple brokers so that the end users received more offers.</>,
+      <><Text isBold>Increased the NET Promoter Score from 7 to 9</Text> by implementing multiple brokers so that the end users received more offers.</>,
       <><Text isBold>Enhanced user retention by 3x</Text> by improving the insurance renewal and failed to get results systems</>,
     ],
     skills: ['.NET Framework', 'MVC', 'JQuery', 'REST API', 'Web Forms', 'Windows Forms', 'SQL', 'Entity Framework', 'ADO .NET', 'Stored Procedures'],
