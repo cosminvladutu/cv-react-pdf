@@ -52,10 +52,11 @@ export const projectsByName = {
     to: 'Present',
     title: 'Senior .NET Azure developer (Feature Lead)',
     company: 'Arnia Software',
-    clientProblem: 'The client, which is a German energy provider, needed a custom wrapper over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly in Auth0. Also, the second aim of the project was to have a centralized authentification and authorization system for all the apps',
+    clientProblem: 'The client, which is a German energy provider, needed a custom solution built over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly by the authorization and authentification system. The goal was to make it easier to configure and enhance Auth0’s standard features, and to create a unified system for logging in and managing user access across all their internal and customer facing apps.',
     achievements: [
-      <><Text isBold>Increased the client base by more than 2x</Text> by filling a niche in the market by providing offline capabilities and automatic synchronization on network reachability.</>,
-      <><Text isBold>Reduced development time by more than 5x</Text> and highly increased data quality by designing and implementing a mobile oriented app with much better UX compared to out of the box solutions provided by the SAP platform.</>,
+      <><Text isBold>Reduced operational costs</Text> by automating manual processes previously handled by interns.</>,
+      <><Text isBold>Added 70%+ code coverage</Text>  across new components, improving maintainability, reducing regression risk, and supporting future refactorings.</>,
+      <><Text isBold>Reduced manual configuration to 0</Text> by delivering all infrastructure changes using Bicep.</>,
     ],
     skills: ['.NET Core', 'CosmosDb', 'DDD', 'CQRS', 'Auth0', 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless'],
   },
@@ -65,10 +66,10 @@ export const projectsByName = {
     to: 'Jan 2025',
     title: 'Senior .NET Azure developer',
     company: 'Arnia Software',
-    clientProblem: 'The client, a German energy grid provider, was losing money by not having digital processes available for its customers. Most of the processes were manual, took time and needed human interaction',
+    clientProblem: 'The client, a German energy grid provider, was losing money by not having digital processes available for its customers. Most of the processes were manual, took time and needed human interaction.',
     achievements: [
       <><Text isBold>Improved security 2X</Text> by implementing a single system that was accountable for contract credentials.</>,
-      <><Text isBold>Increased development speed by 30%</Text> by implementing trivial systems using the same patterns and keeping creation templates updated</>,
+      <><Text isBold>Increased development speed by 30%</Text> by implementing trivial systems using the same patterns and keeping creation templates updated.</>,
     ],
     skills: ['C#', '.NET Core', 'EF Core', 'Azure Functions', 'Cosmos DB', 'Azure Services', 'Azure DevOps', 'ARM templates',
        'EventGrid', 'Distributed Systems', 'Serverles'],
@@ -134,7 +135,7 @@ export const projectsByName = {
     company: 'Enea Global Services',
     clientProblem: 'The client, one of the top producers worldwide of infrared and thermal cameras needed a way to enable its customers to be able to work on their images, without any dependency on the devices or the operating systems they had.',
     achievements: [
-            <><Text isBold>Led a team of 3 people,</Text>, by being a tech lead, scrum master, proxy product owner, developer, and solution architect for the team</>,
+            <><Text isBold>Led a team of 3 people,</Text>, by being a tech lead, scrum master, proxy product owner, developer, and solution architect for the team.</>,
             <><Text isBold>Increased client satisfaction 2x</Text> by delivering a fast solution, even for people with poor internet connection.</>,
             <><Text isBold>Reduced the number of implementation bugs to 0</Text> by introducing mutation testing and having a code coverage of over 85% system into modules, which led to a reduction of development effort in maintenance.</>,
     ],
@@ -163,9 +164,9 @@ export const projectsByName = {
     company: 'Centric IT Solutions',
     clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the municipalities and needed a product so that the taxes for waterboards could be easily calculated and sent both to the paying people and the government.',
     achievements: [
-      <><Text isBold>Boosted product stability by 50%</Text> by creating nightly builds in which all the tests were run and introduced static code analysis with rules agreed upon at the suite level</>,
-      <><Text isBold>Shadow led a team of 7,</Text> and increased the communication and decision-making process by being the mediator between the dev team and architects and between team members</>,
-      <><Text isBold>Reduced the number of production criticalbugs to 0</Text> by increasing the code-coverage from 30% to 60% and introducing well-known patterns instead of custom implementation</>,
+      <><Text isBold>Boosted product stability by 50%</Text> by creating nightly builds in which all the tests were run and introduced static code analysis with rules agreed upon at the suite level.</>,
+      <><Text isBold>Shadow led a team of 7,</Text> and increased the communication and decision-making process by being the mediator between the dev team and architects and between team members.</>,
+      <><Text isBold>Reduced the number of production criticalbugs to 0</Text> by increasing the code-coverage from 30% to 60% and introducing well-known patterns instead of custom implementation.</>,
 
     ],
     skills: ['.NET Famework', 'Windows Services', 'WCF Services', 'Windows Forms', 'MassTransit', 'RabbitMQ', 'Oracle', 'Azure DevOps', 'SonarQube', 'Selenium'],
@@ -178,7 +179,7 @@ export const projectsByName = {
     company: 'Centric IT Solutions',
     clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the private healthcare system from its country, and it was struggling to get new customers due to old-looking and working applications.',
     achievements: [
-      <><Text isBold>Increased performance by 20%</Text> by splitting the monoliths into multiple services and implementing clean architecture and well-known patterns</>,
+      <><Text isBold>Increased performance by 20%</Text> by splitting the monoliths into multiple services and implementing clean architecture and well-known patterns.</>,
       <><Text isBold>Decreased the number of critical bugs by 50%</Text> by becoming like a "fireman" and getting involved in all critical bugs from the suite.</>,
     ],
     skills: ['.NET', 'CQRS', 'Web API', 'MVC', 'MSSql', 'nHibernate', 'Entity Framework', 'Dapper', 'Release Management (VSTS)', 'PowerShell'],
@@ -191,7 +192,7 @@ export const projectsByName = {
     clientProblem: 'The client, one of the top 3 software insurance comparison companies from the UK, was struggling to increase its conversion rate from leads to customers due to an immature product.',
     achievements: [
       <><Text isBold>Increased the NET Promoter Score from 7 to 9</Text> by implementing multiple brokers so that the end users received more offers.</>,
-      <><Text isBold>Enhanced user retention by 3x</Text> by improving the insurance renewal and failed to get results systems</>,
+      <><Text isBold>Enhanced user retention by 3x</Text> by improving the insurance renewal and failed to get results systems.</>,
     ],
     skills: ['.NET Framework', 'MVC', 'JQuery', 'REST API', 'Web Forms', 'Windows Forms', 'SQL', 'Entity Framework', 'ADO .NET', 'Stored Procedures'],
   }
