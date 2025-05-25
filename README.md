@@ -33,7 +33,6 @@ The application is organized into these main sections:
 - **Font Configuration**: Explicit Unicode range configuration for proper character display
 - **Timeline Visualization**: Custom implementation with SVG for project history display
 - **Responsive Layout**: Properly structured multi-page PDF layout
->>>>>>> 250cd8cc1d8cb952507cf6795112aa82ab9b5f4c
 
 ## Getting Started
 
