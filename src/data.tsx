@@ -14,185 +14,174 @@ import Text from "./components/CvDocument/elements/Text";
 export type EnabledProjects = (keyof typeof projectsByName)[];
 
 export const enabledProjectsAll: EnabledProjects = [
-  'l20',
-  'fdc',
-  'betfair',
-  'onPharma',
-  'lawAndMediation',
-  'vinnVinn',
-  'sundose',
-  'yload',
-  'stylyze',
-  'liteshell',
-  'pmsDms',
+  'mek',
+  'now',
+  'medcom',
+  'lms',
+  'cgm',
+  'dr',
+  'webrella',
+  'insite',
+  'woz',
+  'suite4care',
+  'vast',
 ];
 
 export const enabledProjectsOnePage: EnabledProjects = [
-  'l20',
-  'yload',
-  'stylyze'
+  'now',
+  'insite',
+  'woz'
 ]
 
 
 export const projectsByName = {
-  fdc: {
-    projectName: 'Field Data Capture',
-    from: 'Dec 2021',
-    to: 'Mar 2022',
-    title: 'Senior React Native Developer',
-    company: 'Fortech',
-    clientProblem: 'The client, an US based startup in the construction field, was constantly losing crucial data about the crew and equipment due to lacking an unified tracking system that works even without internet connection.',
+  mek: {
+    projectName: 'MEK',
+    from: 'Jan 2025',
+    to: 'Present',
+    title: 'Senior .NET Azure developer (Feature Lead)',
+    company: 'Arnia Software',
+    clientProblem: 'The client, which is a German energy provider, needed a custom wrapper over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly in Auth0. Also, the second aim of the project was to have a centralized authentification and authorization system for all the apps',
     achievements: [
       <><Text isBold>Increased the client base by more than 2x</Text> by filling a niche in the market by providing offline capabilities and automatic synchronization on network reachability.</>,
       <><Text isBold>Reduced development time by more than 5x</Text> and highly increased data quality by designing and implementing a mobile oriented app with much better UX compared to out of the box solutions provided by the SAP platform.</>,
     ],
-    skills: ['TypeScript', 'React Native', 'React', 'WebPack', 'SAP', 'OAuth', 'Styled Components'],
+    skills: ['.NET Core', 'CosmosDb', 'DDD', 'CQRS', 'Auth0', 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless'],
   },
-  l20: {
-    projectName: 'L20 - F4ID',
-    from: 'Sep 2021',
-    to: 'Apr 2022',
-    title: 'Senior JavaScript Fullstack Developer',
-    company: 'XoomWorks',
-    clientProblem: 'The client, a UK based Startup backed by a successful NPO had issues with shady, evasive, misleading and purposefully unclear legal processes which lead to millions of dollars lost in the charity donation process.',
+  now: {
+    projectName: 'Now',
+    from: 'May 2023',
+    to: 'Jan 2025',
+    title: 'Senior .NET Azure developer',
+    company: 'Arnia Software',
+    clientProblem: 'The client, a German energy grid provider, was losing money by not having digital processes available for its customers. Most of the processes were manual, took time and needed human interaction',
     achievements: [
-      <><Text isBold>Increased the Face Recognition performance by more than 80% and precision by over 25%</Text> by successfully integrating AWS Rekognition Services.</>,
-      <><Text isBold>Improved performance by 40%</Text> and  by reorganising the code and designing an ecosystem based on microservices.</>,
-      <><Text isBold>Ensured 100% transparency</Text> in the process of distributing money for sold goods by generating in depth reports on all the transactions and presenting them in human-readable insights from the database.</>,
+      <><Text isBold>Improved security 2X</Text> by implementing a single system that was accountable for contract credentials.</>,
+      <><Text isBold>Increased development speed by 30%</Text> by implementing trivial systems using the same patterns and keeping creation templates updated</>,
     ],
-    skills: ['JavaScript', 'NodeJS', 'PostgreSQL', 'ReactJS', 'Redux', 'Docker', 'AWS', 'Jenkins CI/CD', 'GitHub', 'Jira'],
+    skills: ['C#', '.NET Core', 'EF Core', 'Azure Functions', 'Cosmos DB', 'Azure Services', 'Azure DevOps', 'ARM templates',
+       'EventGrid', 'Distributed Systems', 'Serverles'],
   },
-  betfair: {
-    projectName: 'Betfair',
+  medcom: {
+    projectName: 'MedCom',
+    from: 'Jan 2023',
+    to: 'May 2023',
+    title: '.NET Solution Architect',
+    company: '',
+    clientProblem: 'The client, a medical clinic that needed a way to help people that wanted a second opinion or didn’t have urgent matters, to get fast contact with a doctor, online, without getting into the clinic.',
+    achievements: [
+      <><Text isBold>Increased user satisfaction by 60%</Text> by implementing a user-friendly and easy-to-use user interface.</>,
+      <><Text isBold>Boosted user retention by 2x</Text> by implementing an easy way to identify the user’s journey and enabling admins to provide vouchers and offers exactly for the user’s needs.</>,
+      <><Text isBold>Decreased clinic costs by 20%</Text> since most of the customers started to get online consultations and not come physically to the clinic.</>,
+    ],
+    skills: ['.NET Core', 'PostgreSQL', 'DDD', 'CQRS', 'Auth0', 'Orchard', 'Blazor', 'HangFire', 'Polly', 'Docker', 'Azure DevOps'],
+  },
+  lms: {
+    projectName: 'Leads management system',
+    from: 'Sept 2021',
+    to: 'Dec 2022',
+    title: 'Senior .NET Fullstack developer (Shadow leading)',
+    company: 'Arnia Software',
+    clientProblem: ' The client, one of the largest energy supply companies in Germany, was struggling with converting leads into customers due to a lead management system that had overcomplicated and long-running processes.',
+    achievements: [
+      <><Text isBold>Reduced to almost 0 the number of implementation bugs</Text> by increasing the test code coverage and introducing new ways of testing the domain core concepts.</>,
+      <><Text isBold>Increased performance for the processes that took more than 5 min to </Text> by splitting the system into smaller pieces based on the type of processes they worked with and upgrading the framework to the latest version.</>,
+    ],
+    skills: ['.NET Core', 'Angular', ' MassTransit', 'SQL', 'CosmosDB', 'Azure Services', 'Azure Functions', 'Service Bus', 'SonarQube', 'NexusIQ', 'Azure DevOps', 'ARM Templates', 'Distributed Systems', 'CQRS'],
+  },
+  cgm: {
+    projectName: 'CGM',
+    from: 'Nov 2020',
+    to: 'Sept 2021',
+    title: 'Head of .NET Functional Area',
+    clientProblem: 'The client, a German company, provided medical software for 13 countries and needed someone in the development centre from Romania to guide all the projects and people who worked on the dotnet discipline.',
+    achievements: [
+      <><Text isBold>Increased developers’ satisfaction</Text> by having regular one-to-one meetings, organizing a “Learning group” in which they have technical and soft skills presentations, and setting and monitoring technical objectives for them to evolve.</>,
+      <><Text isBold>Increased development speed 3x</Text> by doing regular audits of the projects from the Romanian centre and suggesting patterns and architectures types that could be implemented to improve the products.</>,
+    ],
+    skills: ['Communication', 'Leadership', 'Team Management', 'Situational Leadership', 'Management'],
+  },
+  dr: {
+    projectName: 'DR App',
     from: 'May 2020',
-    to: 'Sep 2021',
-    title: 'Senior React Native Developer',
-    company: 'XoomWorks',
-    clientProblem: 'The client, a successful European online betting company, was struggling with a horribly slow app delivery time, which led to losing a lot of customers, due to having an enormous number of apps written in different technologies.',
+    to: 'Sept 2021',
+    title: 'Senior .NET Fullstack developer (Team lead)',
+    company: 'CGM',
+    clientProblem: 'The client, was a German company that provided medical software which aimed to digitize Dutch pharmacy processes, reducing human errors and saving lives by eliminating paper prescriptions.',
     achievements: [
-      <><Text isBold>Drastically reduced the mobile app development costs by 60%</Text> by identifying and implementing common parts in shareable React Native modules.</>,
-      <><Text isBold>Solidified the marketing metrics by 100%</Text> by ensuring synchronisation between iOS and Android platforms by implementing the event loggers in a single place.</>,
+      <><Text isBold>Led a team of 8 people,</Text> from a Team lead position.</>,
+      <><Text isBold>Increased client satisfaction 3x</Text> by delivering a fast solution that uses real-time communication with a modern-looking user interface.</>,
+      <><Text isBold>Kept a maintainability index over 60</Text> by decoupling each part of the system into modules, which led to a reduction of development effort in maintenance.</>,
     ],
-    skills: ['TypeScript', 'React Native', 'Apple Pay', 'REST API', 'Google Analytics', 'Target Process'],
+    skills: ['.NET Core', '.Net Framework', 'WPF', 'Angular', 'Typescript', 'IdentityServer4', 'SignalR', 'ngRX', 'WireMock .NET', 'Team Management', 'Situational Leadership'],
   },
-  onPharma: {
-    projectName: 'OnPharma!',
-    from: 'Apr 2020',
-    to: 'Jun 2020',
-    title: 'Senior React Native Developer',
-    company: 'BeeCoded',
-    clientProblem: 'The client, an NPO backed by pharma specialists and companies, was trying to find an efficient way to help pharma students and specialists to improve their knowledge, but was failing to do so due to lacking a modern and efficient education method.',
-    achievements: [
-      <>Assured an increase in <Text isBold>client retention of over 40%</Text> by developing a highly efficient educational mobile app which includes a level based quiz game, together with news and donations based on user score.</>,
-      <><Text isBold>Improved the customer engagement by 2x</Text> by designing a rock solid system to keep track of the acquired scores and ranking the users on a public leaderboard.</>,
-    ],
-    skills: ['React Native', 'Rest API', 'WebSocket', 'Socket.IO'],
-  },
-  lawAndMediation: {
-    projectName: 'Law and mediation for everyone',
-    from: 'Jan 2020',
-    to: 'Apr 2020',
-    title: 'Senior ReactJS Developer',
-    // company: 'BeeCoded',
-    clientProblem: 'The Client, a public association established for the purpose of defending and promoting the collective rights and interests of individuals, was struggling to reach out to people living in less favored areas like smaller villages, due to lacking a solution that would connect efficient communication, documentation and reporting needs.',
-    achievements: [
-      <><Text isBold>Increased reachability</Text> in less favored areas <Text isBold>by more than 30%</Text> by
-        designing a simple yet rich web and mobile app where people connect with specialists in law and justice.</>,
-      <><Text isBold>Reduced the costs and time of development by 3X</Text> by implementing a React Native codebase that
-        will deploy on iOS, Android and WEB at the same time.</>,
-      <><Text isBold>Increased the user base by 25%</Text> by improving the accessibility with a record audio
-        functionality that allows the users to describe their problems with voice together with text.</>,
-    ],
-    skills: ['ReactJS', 'React Native', 'NextJS', 'SCSS', 'TypeScript', 'NodeJS', 'GraphQL', 'PostgreSQL', 'WebSocket', 'Socket.IO', 'Docker', 'AWS EC2', 'AWS RDS'],
-  },
-  vinnVinn: {
-    projectName: 'VinnVinn',
+  webrella: {
+    projectName: 'Webrella',
     from: 'Apr 2019',
-    to: 'Apr 2020',
-    title: 'Senior React Native Developer',
-    company: 'Innit AS',
-    clientProblem: 'The client, one of the Top 3 sports equipment stores in Norway was losing a significant amount of money due to lacking organisation for in store consultants ending with lots of lost customers.',
+    to: 'May 2020',
+    title: 'Senior .NET Azure developer (Team lead)',
+    company: 'Enea Global Services',
+    clientProblem: 'The client, one of the top producers worldwide of infrared and thermal cameras needed a way to enable its customers to be able to work on their images, without any dependency on the devices or the operating systems they had.',
     achievements: [
-      <><Text isBold>Significantly reduced customer waiting time by more than 60%</Text> and <Text isBold>increased the in store sales by more than 10%</Text> by designing a system that will localise the client’s position in store and notify the targeted specialists instantly.</>,
+            <><Text isBold>Led a team of 3 people,</Text>, by being a tech lead, scrum master, proxy product owner, developer, and solution architect for the team</>,
+            <><Text isBold>Increased client satisfaction 2x</Text> by delivering a fast solution, even for people with poor internet connection.</>,
+            <><Text isBold>Reduced the number of implementation bugs to 0</Text> by introducing mutation testing and having a code coverage of over 85% system into modules, which led to a reduction of development effort in maintenance.</>,
     ],
-    skills: ['React Native', 'Redux', 'React Animations', 'Stripe'],
+    skills: ['.NET', 'Communication', 'Leadership', 'Team Management', 'Scrum master', 'Agile', 'Xunit', 'Moq', 'CQS', 'Azure', 'Jenkins', 'Software Architecture'],
   },
-  sundose: {
-    projectName: 'Sundose',
-    from: 'Jan 2019',
+  insite: {
+    projectName: 'Insite',
+    from: 'Feb 2018',
     to: 'Apr 2019',
-    title: 'Senior React Native Developer',
-    company: 'ITCraftShip',
-    clientProblem: 'The client, a laboratory that creates nutritional supplements and sells them directly to their clients, was having a hard time matching the custom supplements prepared with the client who ordered them due to lacking an automated system, keeping track manually on excel.',
+    title: ' Senior .NET Fullstack Azure developer',
+    company: 'Enea Global Services',
+    clientProblem: 'The client, one of the top producers worldwide of infrared and thermal cameras was trying to increase the user satisfaction of their users who were thermal inspectors by digitalizing the creation of reports done by them and increasing their productivity',
     achievements: [
-      <><Text isBold>Drastically improved the synchronisation process by 3X</Text> by designing a fully functional app to help clients easily order and keep track of their supplements by implementing periodic reminders to take the supplements.</>,
-      <><Text isBold>Reduced the development costs by 40%</Text> and <Text isBold>doubled the sales</Text> by implementing a rock solid app deployed on iOS, Android and Web that included a subscription based system by estimating the most favourable date to automatically order the packages based on user behaviour.</>,
+      <><Text isBold>Boosted client satisfaction 2x</Text> by creating a way for them to be able to create both printed documents but also save in a cloud their reports and assets after and during the inspection.</>,
+      <><Text isBold>Increased customer retention by 5x</Text> by introducing an easier-to-use solution for their processes while they are on the field, away from a computer.</>,
+      <><Text isBold>Kept a maintainability index over 60,</Text> by decoupling each part of the system into modules, which led to a reduction of development effort in maintenance.</>,
+
     ],
-    skills: ['ReactJS', 'React Native', 'React Animations', 'SCSS', 'PayU'],
+    skills: ['.NET Core', 'Xunit', 'Moq', 'CQRS', 'React', 'Redux', 'Azure ServiceBus', 'Azure B2B', 'Azure SQL Server', 'Unit, Integration and Mutation tests'],
   },
-  yload: {
-    projectName: 'Yload',
-    from: 'Oct 2019',
-    to: 'Oct 2021',
-    title: 'Senior JavaScript Architect',
-    company: 'Yload Global',
-    clientProblem: 'The client, a successful startup in the logistics field, was losing significant amounts of money and falling behind the competition due to lacking expertise in organising the overall development process of the team.',
+  woz: {
+    projectName: 'WOZ',
+    from: 'Aug 2017',
+    to: 'Feb 2018',
+    title: '.NET Backend developer (Shadow leading)',
+    company: 'Centric IT Solutions',
+    clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the municipalities and needed a product so that the taxes for waterboards could be easily calculated and sent both to the paying people and the government.',
     achievements: [
-      <><Text isBold>Secured investments worth over €500k</Text> in less than 6 months by catching potential investors
-        trust and attention by building a highly-intuitive MVP.</>,
-      <><Text isBold>Amassed more than 5k paying users bringing over €20k</Text> in monthly earnings in less than one
-        year by designing an algorithm that automatically matches trucks to loads and improves the performance of the
-        dispatcher</>,
-      <>Boosted the development and deployment processes <Text isBold>by more than 3x</Text> their initial speed by
-        including the Code of Conduct for the development department and automating the CI/CD pipelines</>
+      <><Text isBold>Boosted product stability by 50%</Text> by creating nightly builds in which all the tests were run and introduced static code analysis with rules agreed upon at the suite level</>,
+      <><Text isBold>Shadow led a team of 7,</Text> and increased the communication and decision-making process by being the mediator between the dev team and architects and between team members</>,
+      <><Text isBold>Reduced the number of production criticalbugs to 0</Text> by increasing the code-coverage from 30% to 60% and introducing well-known patterns instead of custom implementation</>,
+
     ],
-    skills: ['TypeScript', 'ReactJS', 'React Native', 'NodeJS', 'GraphQL', 'PostgreSQL', 'Docker', 'Jenkins CI/CD', 'GitLab', 'Jira'],
+    skills: ['.NET Famework', 'Windows Services', 'WCF Services', 'Windows Forms', 'MassTransit', 'RabbitMQ', 'Oracle', 'Azure DevOps', 'SonarQube', 'Selenium'],
   },
-  stylyze: {
-    projectName: 'Stylyze',
-    from: 'Jan 2017',
-    to: 'Jan 2019',
-    title: 'Senior ReactJS Developer',
-    company: 'Fortech',
-    clientProblem: 'The client, an important fashion and decor retail brand, was losing significant potential revenue and was failing to increase online sales due to using a basic unsuccessful recommendation system.',
+  suite4care: {
+    projectName: 'Suite4Care',
+    from: 'Aug 2015',
+    to: 'Jul 2017',
+    title: '.NET FullStack developer',
+    company: 'Centric IT Solutions',
+    clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the private healthcare system from its country, and it was struggling to get new customers due to old-looking and working applications.',
     achievements: [
-      <><Text isBold>Secured 5 profitable contracts worth over $500K</Text> by accurately identifying clients needs and
-        designing and implementing POCs that were generating profits in the pilot phases.</>,
-      <><Text isBold>Improved customer retention by 25%</Text> and <Text isBold>increased the number of signed contracts
-        by 3x</Text> on the strength of engaging AI to replicate the human stylist and designing a SAAS and presenting
-        the recommendations directly on the product pages.</>,
+      <><Text isBold>Increased performance by 20%</Text> by splitting the monoliths into multiple services and implementing clean architecture and well-known patterns</>,
+      <><Text isBold>Decreased the number of critical bugs by 50%</Text> by becoming like a "fireman" and getting involved in all critical bugs from the suite.</>,
     ],
-    skills: ['JavaScript', 'ReactJS', 'Redux', 'Java', 'MongoDB', 'TensorFlow', 'AWS', 'Jenkins CI/CD', 'BitBucket', 'Jira'],
+    skills: ['.NET', 'CQRS', 'Web API', 'MVC', 'MSSql', 'nHibernate', 'Entity Framework', 'Dapper', 'Release Management (VSTS)', 'PowerShell'],
   },
-  liteshell: {
-    projectName: 'Liteshell (AML Services)',
-    from: 'Feb 2016',
-    to: 'Dec 2016',
-    title: 'AngularJS Developer',
-    company: 'Fortech',
-    clientProblem: 'The client, a fintech oriented startup, was missing out on the opportunity to earn additional revenue by selling relevant data about legal entities due to lacking an efficient data collecting system.',
+  vast: {
+    projectName: 'Vast Visibility',
+    from: 'Jul 2011',
+    to: 'Jul 2015',
+    title: '.NET Fullstack developer',
+    clientProblem: 'The client, one of the top 3 software insurance comparison companies from the UK, was struggling to increase its conversion rate from leads to customers due to an immature product.',
     achievements: [
-      <><Text isBold>Improved the reporting process by 10X</Text> by designing a system that automatically collects
-        public data from multiple sources and countries and presents the information and entity relations in a human
-        readable way.</>,
-      <><Text isBold>Increased the reporting precision by 20%</Text> by designing a system that collects the public
-        articles and identifies the emotional level in the context related to the entities and persons of interest.</>,
+      <><Text isBold>Increased the NET Promoter Score from 7 to 9</Text> by implementing multiple brokers so that the end users received more offers.</>,
+      <><Text isBold>Enhanced user retention by 3x</Text> by improving the insurance renewal and failed to get results systems</>,
     ],
-    skills: ['AngularJS', 'SCSS', 'Rest API', 'Elastic Search', 'Grunt', 'Bower', 'Twitter Bootstrap'],
-  },
-  pmsDms: {
-    projectName: 'PMS and DMS integration',
-    from: 'Apr 2014',
-    to: 'Feb 2016',
-    title: 'JavaScript Fullstack Developer',
-    company: 'JMD Planet',
-    clientProblem: 'The client, a petrol distribution company, was losing an important amount of information and was struggling with delayed task status updates due to lacking an automated status integrating system.',
-    achievements: [
-      <><Text isBold>Increase the internal processes performance by 20%</Text> by designing an intermediary solution
-        that will update the project task status based on the statuses of the attached documents.</>,
-      <><Text isBold>Ensured 100% synchronisation accuracy</Text> by replacing entirely the human interaction in the
-        process.</>,
-    ],
-    skills: ['AngularJS', 'Java', 'Spring Framework', 'REST API', 'SCSS', 'Grunt', 'Bower', 'Twitter Bootstrap', 'EMC Documentum'],
+    skills: ['.NET Framework', 'MVC', 'JQuery', 'REST API', 'Web Forms', 'Windows Forms', 'SQL', 'Entity Framework', 'ADO .NET', 'Stored Procedures'],
   }
 }

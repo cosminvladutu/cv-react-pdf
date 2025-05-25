@@ -17,6 +17,7 @@
 import {Image, StyleSheet, View, Svg, Path, G} from "@react-pdf/renderer";
 import React from "react";
 import Text from "../elements/Text";
+import { DiacriticalText } from "../elements";
 import LeftSectionPanel from "./LeftSectionPanel";
 import SkillItem from "./SkillItem";
 import ContactItem from "./ContactItem";
@@ -25,7 +26,7 @@ const LeftSection = () => {
   return (
     <View style={[styles.container]}>
       <View style={styles.profilePictureContainer}>
-        <Image style={styles.profilePicture} src="/images/profile-photo-zoomed.jpg" />
+        <Image style={styles.profilePicture} src="/images/DSC_8292 test.jpg" />
       </View>
       <LeftSectionPanel title={'Contact'}>
         <ContactItem
@@ -37,8 +38,8 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'(+40) 751 077 097'}
-          link={'tel:+40751077097'}
+          text={'(+40) 749 084 655'}
+          link={'tel:+40749084655'}
         />
 
         <ContactItem
@@ -50,11 +51,9 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'radu@nemerenco.com'}
-          link={'mailto:radu@nemerenco.com'}
-        />
-
-        <ContactItem
+          text={'cosmin.vladutu@gmail.com'}
+          link={'mailto:cosmin.vladutu@gmail.com'}
+        />        <ContactItem
           icon={(
             <Svg width="6.4px" height="10px">
               <G transform="scale(0.185)">
@@ -63,7 +62,7 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'Cluj-Napoca, Romania'}
+          text="Iași, România"
         />
 
         <ContactItem
@@ -75,50 +74,62 @@ const LeftSection = () => {
               </G>
             </Svg>
           )}
-          text={'in/radunemerenco'}
-          link={'www.linkedin.com/in/radunemerenco'}
-        />
-
-        <ContactItem
-          icon={(
+          text={'in/cosmin-vladutu'}
+          link={'www.linkedin.com/in/cosmin-vladutu'}
+        />        <ContactItem
+    icon={(
             <Svg width="10px" height="10px">
               <G transform="scale(0.2)">
-                <Path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                      d="M43.999,32.785 C43.999,36.197 42.815,39.86 40.447,41.451 C38.79,43.817 35.215,44.999 31.854,44.999 C29.715,44.999 27.805,44.534 26.124,43.603 C24.902,43.836 23.604,43.952 22.229,43.952 C16.423,43.952 11.477,41.897 7.390,37.787 C3.303,33.677 1.260,28.714 1.260,22.898 C1.260,21.967 1.413,20.571 1.718,18.710 C0.572,16.616 0.0,14.561 0.0,12.545 C0.0,9.132 1.183,6.244 3.552,3.878 C5.920,1.513 8.784,0.330 12.145,0.330 C14.513,0.330 16.690,0.951 18.677,2.191 C19.440,2.37 20.624,1.959 22.229,1.959 C28.34,1.959 32.980,3.994 37.67,8.66 C41.154,12.137 43.197,17.81 43.197,22.898 C43.197,24.681 43.45,26.193 42.739,27.434 C43.579,29.140 43.999,30.924 43.999,32.785 ZM33.572,24.526 C33.38,23.518 32.235,22.665 31.166,21.967 C30.326,21.424 29.142,20.881 27.614,20.338 C26.545,20.28 24.979,19.640 22.916,19.175 C21.388,18.787 20.433,18.554 20.51,18.477 L18.333,17.779 C18.104,17.702 17.722,17.391 17.187,16.849 C16.881,16.383 16.729,15.995 16.729,15.685 C16.729,14.832 17.149,14.134 17.989,13.591 C18.829,13.49 20.51,12.777 21.656,12.777 C23.413,12.777 24.597,13.49 25.208,13.591 C25.742,14.57 26.354,14.832 27.41,15.918 C27.347,16.461 27.767,17.3 28.302,17.547 C28.836,17.934 29.447,18.128 30.135,18.128 C30.899,18.128 31.586,17.818 32.197,17.197 C32.808,16.577 33.114,15.918 33.114,15.220 C33.114,14.444 32.885,13.630 32.426,12.777 C31.892,11.924 31.204,11.148 30.364,10.451 C29.447,9.753 28.302,9.171 26.927,8.706 C25.781,8.318 24.138,8.124 21.999,8.124 C19.479,8.124 17.454,8.434 15.927,9.55 C14.170,9.753 12.795,10.722 11.801,11.963 C10.885,13.203 10.426,14.600 10.426,16.151 C10.426,17.857 10.847,19.253 11.687,20.338 C12.451,21.346 13.673,22.238 15.354,23.14 C17.34,23.712 18.867,24.255 20.854,24.642 C23.145,25.108 24.444,25.418 24.749,25.573 C25.590,25.806 26.315,26.232 26.927,26.853 C27.461,27.318 27.729,27.977 27.729,28.830 C27.729,29.916 27.232,30.808 26.239,31.505 C25.246,32.203 23.833,32.552 21.999,32.552 C20.854,32.552 19.822,32.359 18.906,31.971 C18.218,31.661 17.645,31.234 17.187,30.691 C16.729,30.71 16.309,29.334 15.927,28.481 C15.621,27.783 15.239,27.201 14.781,26.736 C14.322,26.271 13.711,26.38 12.947,26.38 C12.31,26.38 11.305,26.310 10.770,26.853 C10.159,27.473 9.854,28.132 9.854,28.830 C9.854,30.148 10.312,31.428 11.229,32.669 C12.69,33.832 13.215,34.840 14.666,35.693 C16.652,36.779 19.135,37.322 22.114,37.322 C24.788,37.322 27.3,36.934 28.760,36.159 C30.746,35.305 32.159,34.220 32.999,32.902 C33.916,31.661 34.374,30.110 34.374,28.249 C34.374,26.775 34.107,25.534 33.572,24.526 Z"/>
+                <Path fill-rule="evenodd" fill="rgb(255, 255, 255)" 
+                      d="M38.645,5.637h-9.768v11.012h-3.759v-11.012h-9.768v3.671h6.098v23.059h7.329V9.308h6.098v10.781a6.788,6.788 0 0,0 7.329,-6.783V9.08a3.443,3.443 0 0,0 -3.559,-3.443z M31.323,0A6.79,6.79 0 0,0 24.53,6.783v2.294h3.759V6.783a3.02,3.02 0 0,1 3.034,-3.034h7.329a6.768,6.768 0 0,1 6.098,6.783v7.329a3.02,3.02 0 0,1 -3.034,3.034h-3.073v3.748h3.073a6.783,6.783 0 0,0 6.783,-6.783V10.54A10.54,10.54 0 0,0 38.0,0h-6.677z M20.761,20.089H9.769a3.02,3.02 0 0,1 -3.034,-3.034V10.54a6.768,6.768 0 0,1 6.098,-6.783h7.329a3.02,3.02 0 0,1 3.034,3.034v2.294h3.759V6.783A6.79,6.79 0 0,0 20.156,0h-7.329A10.54,10.54 0 0,0 0,10.54v6.515a6.783,6.783 0 0,0 6.783,6.783h13.989v-3.748z"/>
               </G>
             </Svg>
           )}
-          text={'Radu Nemerenco'}
-          link={'https://join.skype.com/invite/ozQ1Vm45pvMD'}
+               text={'Cosmin Vladutu'}
+          link={'https://teams.microsoft.com/l/chat/0/0?users=cosmin.vladutu@gmail.com'}
+        />
+
+        <ContactItem
+            icon={(
+              <Svg width="10px" height="10px">
+                <G transform="scale(0.2)">
+                  <Path fill-rule="evenodd" fill="rgb(255, 255, 255)" 
+                        d="M0,0 L0,45 L45,45 L45,0 L0,0 Z M37.1442,10.6277 L34.8822,12.7965 C34.6692,12.9622 34.5702,13.2312 34.6222,13.4956 L34.6222,31.5022 C34.5702,31.7691 34.6692,32.0379 34.8822,32.2012 L37.0992,34.3724 L37.0992,34.9238 L25.6938,34.9238 L25.6938,34.3724 L27.9942,32.1561 C28.2344,31.9157 28.2344,31.8422 28.2344,31.5022 L28.2344,17.1778 L21.3714,34.8787 L20.2464,34.8787 L12.2682,17.1778 L12.2682,28.6378 C12.1954,29.0971 12.3382,29.5636 12.6582,29.8914 L15.6522,34.3274 L15.6522,34.9238 L7.0158,34.9238 L7.0158,34.3724 L10.0074,29.8914 C10.3298,29.5636 10.4574,29.0947 10.3754,28.6378 L10.3754,15.3026 C10.4178,14.9497 10.2894,14.5991 10.0308,14.3616 L7.4082,10.6277 L7.4082,10.0762 L15.8042,10.0762 L22.7382,25.5254 L28.8414,10.0762 L36.9174,10.0762 L36.9174,10.6277 L37.1442,10.6277 Z" />
+                </G>
+              </Svg>
+            )}
+            text={'@cosmin-vladutu'}
+            link={'https://medium.com/@cosmin-vladutu'}
         />
       </LeftSectionPanel>
 
       <LeftSectionPanel title="Skills">
-        <SkillItem years={12} name="JavaScript" />
-        <SkillItem years={7} name="ReactJS" />
-        <SkillItem years={5} name="React Native" />
-        <SkillItem years={5} name="TypeScript" />
-        <SkillItem years={4} name="NodeJS" />
-        <SkillItem years={4} name="Redux" />
-        <SkillItem years={4} name="Unit Testing" />
-        <SkillItem years={4} name="PostgresQL" />
-        <SkillItem years={3} name="MongoDB" />
-        <SkillItem years={3} name="Java" />
-        <SkillItem years={3} name="Spring Framework" />
-        <SkillItem years={7} name="Rest API" />
-        <SkillItem years={4} name="GraphQL" />
-        <SkillItem years={3} name="WebSocket" />
-        <SkillItem years={1} name="Web3.js" />
-        <SkillItem years={5} name="WebPack" />
-        <SkillItem years={3} name="Styled Components" />
-        <SkillItem years={3} name="Docker" />
-        <SkillItem years={2} name="AWS" />
-      </LeftSectionPanel>
-
-      <LeftSectionPanel title="Education">
-        <Text contrast isBold>Technical University of Moldova</Text>
-        <Text contrast>BA in Computer Science</Text>
-        <Text contrast>Chisinau, 2011 - 2015</Text>
+        <SkillItem years={14} name="C#" />
+        <SkillItem years={14} name=".NET" />
+        <SkillItem years={13} name="SQL Server" />
+        <SkillItem years={10} name="Entity framework" />
+        <SkillItem years={10} name="Unit & Integration Tests" />
+        <SkillItem years={4} name="Azure Functions" />
+        <SkillItem years={4} name="Mutation Tests" />
+        <SkillItem years={6} name="CQRS" />
+        <SkillItem years={7} name="Azure DevOps" />
+        <SkillItem years={6} name="Azure Services" />
+        <SkillItem years={4} name="CosmosDB" />
+        <SkillItem years={4} name="Distributed Systems" />
+        <SkillItem years={4} name="Serverless" />
+        <SkillItem years={4} name="ARM Templates & Bicep" />
+        <SkillItem years={3} name="SonarQube" />
+        <SkillItem years={2} name="Windows Services" />
+        <SkillItem years={2} name="IdentityServer" />
+        <SkillItem years={2} name="Polly" />
+        <SkillItem years={2} name="MassTransit" />
+        <SkillItem years={2} name="ServiceBus" />
+        <SkillItem years={2} name="Angular" />
+        <SkillItem years={2} name="React" />
+      </LeftSectionPanel>      <LeftSectionPanel title="Education">
+        <Text contrast isBold>Alexandru Ioan-Cuza University</Text>
+        <Text contrast>Bachelor in Computer Science</Text>
+        <DiacriticalText contrast>Iași, România, 2007 - 2010</DiacriticalText>
       </LeftSectionPanel>
     </View>
   )
@@ -130,13 +141,24 @@ const styles = StyleSheet.create({
     width: '30%',
   },
   profilePictureContainer: {
-    width: '93%',
+    width: '90%',
     marginHorizontal: 'auto',
     marginBottom: 15
   },
   profilePicture: {
     borderRadius: 9999,
-    transform: 'translateY(10p0x)'
+    transform: 'translateY(10px)',
+  },
+  contactItemContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 5,
+  },
+  contactIcon: {
+    width: 15,
+    marginRight: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 })
 

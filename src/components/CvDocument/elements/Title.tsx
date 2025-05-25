@@ -1,33 +1,37 @@
 // Title.tsx
-// This component renders a styled title text for the CV document using @react-pdf/renderer.
-// It extends the custom Text component and applies uppercase transformation and font size styling.
-//
-// Props: Inherits all props from the custom Text component, plus optional style overrides.
-//
-// Usage: Used for section titles in the PDF layout.
+// This component wraps @react-pdf/renderer Text to provide custom styling for titles in the CV document.
+// Supports contrast (white text) option, with default Lato font and left alignment.
 
 import {StyleSheet} from '@react-pdf/renderer';
-import type {Style} from '@react-pdf/types';
 import React from "react";
 import Text from "./Text";
 
-interface TitleProps extends React.ComponentProps<typeof Text> {}
-
-const Title: React.FC<TitleProps> = ({ style, ...props}) => {
-  const defaultStylesInternal: Style = {...defaultStyle.title};
-
-  const styles = style
-    ? { ...defaultStylesInternal, ...style}
-    : defaultStylesInternal;
-
-  return <Text style={styles} {...props} />
+interface TitleProps {
+  contrast?: boolean;
+  style?: any;
+  children?: React.ReactNode;
+  [key: string]: any;
 }
 
-const defaultStyle = StyleSheet.create({
+const Title: React.FC<TitleProps> = ({ contrast, style, ...props}) => {
+  const combinedStyles = style ? {...styles.title, ...style} : styles.title;
+  
+  return (
+    <Text 
+      style={combinedStyles} 
+      contrast={contrast} 
+      {...props} 
+    />
+  );
+}
+
+const styles = StyleSheet.create({
   title: {
+    fontSize: 14,
     textTransform: 'uppercase',
-    fontSize: 12,
-  },
+    fontWeight: 'bold',
+    textAlign: 'left', // Explicitly set left alignment to override default justify
+  }
 });
 
 export default Title;

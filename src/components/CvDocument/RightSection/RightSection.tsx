@@ -13,9 +13,11 @@ import Text from "../elements/Text";
 import Hr from "./Hr";
 import ProjectCard, {ProjectCardProps} from "./ProjectCard";
 import Title from "../elements/Title";
+import { DiacriticalText } from "../elements";
 
 const titleItems = [
-  'Senior React Fullstack Developer',
+  'Senior .NET Developer',
+  'Leader',
   'Contractor',
   'Freelancer',
 ];
@@ -25,36 +27,54 @@ const titleItems = [
 export interface RightSectionProps {
   projects: ProjectCardProps[];
   workExperienceTitle: string;
+  hideHeader?: boolean;
+  isLastPage?: boolean;
 }
 
-const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle }) => {
+const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTitle, hideHeader = false, isLastPage = false }) => {
+  const containerStyle = isLastPage ? [styles.container, styles.lastPageContainer] : styles.container;
+  
   return (
-    <View style={[styles.container]}>
-      <View style={styles.header}>
-        <Text style={styles.name}>Radu Nemerenco</Text>
-        <View style={styles.titleContainer}>
-          {titleItems.map((titleItem, index) => {
-            return (
-              <View key={titleItem} style={styles.titleItemContainer}>
-                {!!index && <Text style={styles.titleSeparator}>•</Text>}
-                <Text style={styles.titleItem}>{titleItem}</Text>
-              </View>
-            )
-          })}
-        </View>
-      </View>
+    <View style={containerStyle}>
+      {!hideHeader && (
+        <>          <View style={styles.header}>
+            <View style={styles.nameContainer}>
+              <DiacriticalText style={styles.name}>
+                COSMIN VLĂDUȚU
+              </DiacriticalText>
+            </View>
+            <View style={styles.titleContainer}>
+              {titleItems.map((titleItem, index) => {
+                return (
+                  <View key={titleItem} style={styles.titleItemContainer}>
+                    {!!index && <Text style={styles.titleSeparator}>•</Text>}
+                    <Text style={styles.titleItem}>{titleItem}</Text>
+                  </View>
+                )
+              })}
+            </View>
+          </View>
 
-      <Hr />
+          <Hr />
 
-      <Title style={styles.aboutMeTitle}>About Me</Title>
-      <Text style={styles.aboutMeDescription}>I am a senior ReactJS developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>8+ years of experience</Text>, only interested in remote work.</Text>
-      <Text style={styles.aboutMeDescription}>I use my expertise, skills and passion to identify and implement clients’ needs with regards to their software solutions.</Text>
-      <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
+          <Title style={styles.aboutMeTitle}>About Me</Title>
+          <Text style={styles.aboutMeDescription}>I am a Microsoft MVP and certified (MCSD and Azure) Senior .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>14+ years of experience</Text>, only interested in remote work.</Text>
+          <Text style={styles.aboutMeDescription}>I assist clients in accomplishing their objectives by crafting, architecting, and executing clean and resilient software solutions while also assembling, nurturing and leading high-performing teams.</Text>
+          <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
+        </>
+      )}
 
-      <Title style={styles.workExperience}>{workExperienceTitle}</Title>
-
+      {!hideHeader && workExperienceTitle && (
+        <Title style={styles.workExperience}>{workExperienceTitle}</Title>
+      )}
+      
       {projects.map((project, index) => (
-        <ProjectCard key={project.projectName} isLastItem={index === projects.length - 1} {...project} />
+        <ProjectCard 
+          key={project.projectName} 
+          isLastItem={index === projects.length - 1} 
+          {...project} 
+          isLastPage={isLastPage && index === projects.length - 1}
+        />
       ))}
     </View>
   )
@@ -63,15 +83,19 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    paddingTop: 10, // Reduced from 20 to 10 to move everything higher
     flex: 1
-  },
-  header: {
+  },  header: {
     alignItems: 'center'
+  },
+  nameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   name: {
     fontSize: 32,
     textTransform: 'uppercase',
-    marginTop: 20,
+    marginTop: 0,
   },
   titleContainer: {
     flexDirection: 'row',
@@ -91,8 +115,7 @@ const styles = StyleSheet.create({
 
   aboutMeTitle: {
     marginBottom: 5
-  },
-  aboutMeDescription: {
+  },  aboutMeDescription: {
     opacity: 0.7,
     marginTop: 2,
     marginBottom: 3,
@@ -100,6 +123,12 @@ const styles = StyleSheet.create({
 
   workExperience: {
     marginTop: 15,
+  },
+    lastPageContainer: {
+    minHeight: '100%', // Ensure it takes the full height of the page
+    paddingBottom: 50, // Add extra padding at the bottom for the last page
+    display: 'flex',
+    flexDirection: 'column',
   },
 
 })

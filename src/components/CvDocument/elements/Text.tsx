@@ -1,22 +1,18 @@
 // Text.tsx
 // This component wraps @react-pdf/renderer Text to provide custom styling for the CV document.
-// Supports contrast (white text) and bold (black font weight) options, with default Lato font and justified alignment.
-//
-// Props:
-// - contrast: boolean (optional) — sets text color to white
-// - isBold: boolean (optional) — sets font weight to black
-// - style: custom style overrides
-// - All other @react-pdf/renderer TextProps
-//
-// Usage: Used throughout the CV for consistent text rendering.
+// Supports contrast (white text) and bold (black font weight) options.
+// Fixes Romanian diacritical characters by using a custom font configuration.
 
-import ReactPDF, {StyleSheet, Text as PdfText} from '@react-pdf/renderer';
+import {StyleSheet, Text as PdfText} from '@react-pdf/renderer';
 import type {Style} from '@react-pdf/types';
 import React from "react";
 
-interface TextProps extends ReactPDF.TextProps {
+interface TextProps {
   contrast?: boolean;
   isBold?: boolean;
+  style?: any;
+  children?: React.ReactNode;
+  [key: string]: any;
 }
 
 const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
@@ -27,15 +23,22 @@ const Text: React.FC<TextProps> = ({ contrast, isBold, style, ...props}) => {
   }
 
   if (isBold) {
-    defaultStylesInternal.fontWeight = 'black'
+    defaultStylesInternal.fontWeight = 900;
   }
-
-  const styles = style
+  
+  const combinedStyle = style
     ? { ...defaultStylesInternal, ...style}
     : defaultStylesInternal;
-
-  return <PdfText style={styles} {...props} />
-}
+    // Special handling for Romanian diacritical characters
+  const enhancedProps = {...props};
+  
+  // If the text contains Romanian diacritical characters, use NotoSans font
+  if (typeof props.children === 'string' && /[ĂȚăț]/.test(props.children)) {
+    combinedStyle.fontFamily = 'NotoSans';
+  }
+  
+  return <PdfText style={combinedStyle} {...enhancedProps} />;
+};
 
 const defaultStyle = StyleSheet.create({
   text: {

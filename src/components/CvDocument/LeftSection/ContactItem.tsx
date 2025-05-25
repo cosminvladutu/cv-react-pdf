@@ -10,26 +10,47 @@
 
 import React, {ReactNode} from "react";
 import {StyleSheet, View, Link} from "@react-pdf/renderer";
-import Text from "../elements/Text";
+import { Text, DiacriticalText } from "../elements";
+import { hasDiacriticalChars } from "../../../utils/diacritics";
 
 interface ContactItemProps {
   icon: ReactNode;
-  text: ReactNode;
+  text?: ReactNode;
   link?: string;
+  children?: ReactNode;
 }
 
 const ContactItem: React.FC<ContactItemProps> = ({
   icon,
   text,
   link,
+  children,
 }) => {
-  const textElementToRender = link
+  // Extract diacritical text detection to a reusable function
+  const isDiacriticalText = (content: any): boolean => {
+    return (typeof content === 'string' && hasDiacriticalChars(content));
+  };
+
+  const renderText = () => {
+    if (children) {
+      return children;
+    }
+    
+    if (isDiacriticalText(text) && typeof text === 'string') {
+      return <DiacriticalText contrast>{text}</DiacriticalText>;
+    }
+    
+    return <Text contrast>{text}</Text>;
+  };  const textElementToRender = link && text
     ? (
       <Link src={link}>
-        <Text contrast style={styles.linkText}>{text}</Text>
+        {isDiacriticalText(text) && typeof text === 'string'
+          ? <DiacriticalText contrast style={styles.linkText}>{text}</DiacriticalText>
+          : <Text contrast style={styles.linkText}>{text}</Text>
+        }
       </Link>
     )
-    : <Text contrast>{text}</Text>;
+    : renderText();
 
   return (
     <View style={styles.container}>
@@ -52,10 +73,12 @@ const styles = StyleSheet.create({
     height: 10,
     alignItems: 'center',
     marginRight: 10,
-  },
-  linkText: {
+  },  linkText: {
     // textDecoration: 'none', doesn't work. The line should not be displayed
     textDecoration: 'line-through underline',
+  },
+  text: {
+    // Default text style
   }
 })
 
