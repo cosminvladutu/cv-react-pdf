@@ -1,8 +1,11 @@
 # CV Website built with React and @react-pdf/renderer
 
+<<<<<<< HEAD
+This project is a fork of Radu Nemerenco's project, which can be found at https://github.com/radunemerenco/cv-react-pdf . It has been enhanced with a more colorful design, additional sections for certifications and technical blog contributions, extensive refactoring, and added technical documentation. Given the big differences in both appearance and structure, I’ve decided to maintain it as a separate project rather than submitting a pull request to the original repository.
+=======
 This project is a professional CV/resume web application built with Next.js and React, utilizing @react-pdf/renderer to generate beautiful PDF resumes that can be viewed directly in the browser or downloaded.
 
-Live demo: [https://cv.nemerenco.com](https://cv.nemerenco.com)
+This is a fork of Radu Nemerenco's project, which can be found at https://github.com/radunemerenco/cv-react-pdf . It has been enhanced with a more colorful design, additional sections for certifications and technical blog contributions, extensive refactoring, and added technical documentation. Given the big differences in both appearance and structure, I’ve decided to maintain it as a separate project rather than submitting a pull request to the original repository.
 
 ## Project Features
 
@@ -33,6 +36,7 @@ The application is organized into these main sections:
 - **Font Configuration**: Explicit Unicode range configuration for proper character display
 - **Timeline Visualization**: Custom implementation with SVG for project history display
 - **Responsive Layout**: Properly structured multi-page PDF layout
+>>>>>>> 250cd8cc1d8cb952507cf6795112aa82ab9b5f4c
 
 ## Getting Started
 
