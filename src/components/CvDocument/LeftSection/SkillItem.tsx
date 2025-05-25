@@ -1,11 +1,19 @@
 // SkillItem.tsx
 // This component renders a single skill item with its name and years of experience for the CV document.
+// It uses a two-column layout for clean presentation of skills and experience levels.
 //
 // Props:
-// - name: string — Name of the skill
-// - years: number — Years of experience
+// - name: string — Name of the skill (left column)
+// - years: number — Years of experience (right column)
 //
-// Usage: Used in LeftSection to display a list of skills.
+// Visual features:
+// - Two-column layout with skill name on left, years on right
+// - Proper spacing between rows (5px margin)
+// - Justified content with space-between for clean alignment
+// - Consistent width for years column (50px) ensuring alignment
+// - Proper contrast for dark background (using white text)
+//
+// Usage: Used in LeftSection to display a list of skills with experience levels.
 
 import React from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";

@@ -1,12 +1,27 @@
 // ContactItem.tsx
 // This component renders a single contact item (icon + text/link) for the CV document.
+// It supports special handling for links and Romanian diacritical characters.
 //
 // Props:
-// - icon: ReactNode — Icon to display
-// - text: ReactNode — Contact text
-// - link: string (optional) — If provided, wraps text in a clickable link
+// - icon: ReactNode — SVG icon to display
+// - text: ReactNode — Contact text content
+// - link: string (optional) — If provided, wraps text in a clickable link with appropriate styling
+// - children: ReactNode (optional) — Alternative to text prop for more complex content
 //
-// Usage: Used in LeftSection to display contact information.
+// Visual features:
+// - Row layout with icon on left, text/link on right
+// - Consistent vertical spacing (2px margins)
+// - Center alignment for clean presentation
+// - Automatic detection and handling of diacritical characters
+// - Clickable links with subtle styling indicators
+// - Proper contrast for dark background (using white text)
+//
+// Implementation details:
+// - Intelligently switches between Text and DiacriticalText based on content
+// - Wraps content in Link component when link prop is provided
+// - Supports SVG icons with consistent sizing
+//
+// Usage: Used in LeftSection to display contact information (phone, email, location, etc.).
 
 import React, {ReactNode} from "react";
 import {StyleSheet, View, Link} from "@react-pdf/renderer";

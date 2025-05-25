@@ -1,9 +1,20 @@
 // RightSection.tsx
 // This component renders the right section of the CV document, including the user's name, titles, about section, and work experience/projects.
+// It takes up 70% of the page width and contains the main content of the CV.
 //
 // Props:
 // - projects: Array of project objects to display (see ProjectCardProps)
-// - workExperienceTitle: Title for the work experience section
+// - workExperienceTitle: String title for the work experience section
+// - hideHeader: Boolean (optional) - If true, hides the name/title/about section (used on pages after the first)
+// - isLastPage: Boolean (optional) - If true, applies special styling for the last page
+//
+// Visual features:
+// - Header with name and professional titles (displayed only on first page)
+// - About Me section with professional summary (displayed only on first page)
+// - Work Experience section with project cards
+// - Consistent padding and spacing throughout
+// - Special handling for diacritical characters in the name
+// - Responsive layout that works with the project distribution across pages
 //
 // Usage: Used as part of the CvDocument layout to display main content and project history.
 
@@ -58,9 +69,10 @@ const RightSection: React.FC<RightSectionProps> = ({ projects, workExperienceTit
           <Hr />
 
           <Title style={styles.aboutMeTitle}>About Me</Title>
-          <Text style={styles.aboutMeDescription}>I am a Microsoft MVP and certified (MCSD and Azure) Senior .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>14+ years of experience</Text>, only interested in remote work.</Text>
+          <Text style={styles.aboutMeDescription}>I am a Microsoft MVP and certified (MCSD and Azure) Senior .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>14+ years of experience</Text>. . My expertise lies in both front-end and back-end development, and I 
+have a keen interest in Azure.</Text>
           <Text style={styles.aboutMeDescription}>I assist clients in accomplishing their objectives by crafting, architecting, and executing clean and resilient software solutions while also assembling, nurturing and leading high-performing teams.</Text>
-          <Text style={styles.aboutMeDescription}>Drop me a message if you think my expertise could help your organization!</Text>
+          <Text style={styles.aboutMeDescription}><Text style={{fontWeight: 'black'}}>Drop me a message</Text> if you think my expertise could help your organization!</Text>
         </>
       )}
 

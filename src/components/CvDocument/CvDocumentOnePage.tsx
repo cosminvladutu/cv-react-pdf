@@ -1,12 +1,24 @@
 // CvDocumentOnePage.tsx
 // This component defines a single-page PDF CV document using @react-pdf/renderer.
-// It composes LeftSection and RightSection, passing a filtered list of projects for compact display.
+// It provides a condensed version of the full CV by showing only selected key projects.
 //
-// Usage: Used to render a one-page version of the CV.
+// Key features:
+// - Uses the same LeftSection as the full CV but with fewer projects in the RightSection
+// - Maintains the same visual style and layout as the full CV for consistency
+// - Truncates achievements to show only the first two for each project
+// - Same font configuration and diacritical character support as the full CV
+// - Optimized for A4 printing with proper dimensions
+//
+// Technical implementation:
+// - Registers fonts with Unicode support for Romanian diacritical characters
+// - Configures Unicode ranges explicitly for better language support
+// - Maps only projects from enabledProjectsOnePage in data.tsx
+//
+// Usage: Used to render a one-page version of the CV for situations requiring a brief overview.
 
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
-import LeftSection from "./LeftSection/LeftSection";
+import { LeftSectionOnePage } from "./LeftSection";
 import RightSection from "./RightSection";
 import {enabledProjectsOnePage, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
@@ -47,15 +59,15 @@ const styles = StyleSheet.create({
 
 // Create Document Component
 const CvDocumentOnePage = () => {
+  // Map only the enabled projects for the one-page CV
+  // Limit achievements to only the first 2 for each project to save space
   const projects: ProjectCardProps[] = enabledProjectsOnePage.map(projectName => ({
     ...projectsByName[projectName],
     achievements: projectsByName[projectName].achievements.slice(0, 2),
-  }));
-
-  return (
+  }));  return (
     <Document>
-      <Page size="A4" style={styles.page}>
-        <LeftSection />
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionOnePage />
         <RightSection
           projects={projects}
           workExperienceTitle="Most Relevant Work Experience"

@@ -16,19 +16,23 @@ interface DiacriticalTextProps {
 }
 
 /**
- * A generalized component for handling Romanian diacritical characters in PDF documents
+ * A specialized component for handling Romanian diacritical characters in PDF documents
  * 
  * This component solves the issue of displaying Romanian diacritical characters (like Ă, Ș, Ț, etc.)
  * in PDF documents created with @react-pdf/renderer.
  * 
  * The approach:
  * 1. It automatically detects diacritical characters in the text
- * 2. It splits the text into segments, with each diacritical character as a separate segment
+ * 2. It splits the text into segments, separating normal and diacritical characters
  * 3. For regular text, it uses the default font (Lato)
  * 4. For diacritical characters only, it applies the NotoSans font which has better Unicode support
  * 
+ * This technique creates a seamless reading experience even with mixed character sets,
+ * ensuring proper display of Romanian names and locations throughout the CV.
+ * 
  * Usage example:
  * <DiacriticalText>Iași, România</DiacriticalText>
+ * <DiacriticalText contrast>VLĂDUȚU</DiacriticalText>
  * 
  * @param {DiacriticalTextProps} props - Component props
  */

@@ -1,6 +1,18 @@
 // CvDocument.tsx
-// This component defines the main (multi-page) PDF CV document using @react-pdf/renderer.
-// It composes LeftSection and RightSection, passing the full list of projects for detailed display.
+// This component defines the main multi-page PDF CV document using @react-pdf/renderer.
+// It composes LeftSection and RightSection components, organizing the content across multiple pages
+// with proper A4 dimensions (595.28pt × 841.89pt) and consistent styling.
+//
+// Key features:
+// - Distributes projects evenly across multiple pages (3 on first page, 4 on second, 4 on third)
+// - Registers and configures fonts with proper support for Romanian diacritical characters
+// - Organizes the layout with dark left sidebar (30%) and light content area (70%)
+// - Handles page transitions with appropriate layouts for each page
+//
+// Technical implementation:
+// - Uses Font.register to add proper font support, including diacritical characters
+// - Configures consistent A4 page dimensions for all pages
+// - Disables hyphenation to improve text readability in the PDF
 //
 // Usage: Used to render the full version of the CV.
 
@@ -52,7 +64,8 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     backgroundColor: '#FFF',
-    height: '100%', // Ensure consistent height for all pages
+    width: '595.28pt', // Exact A4 width
+    height: '841.89pt', // Exact A4 height
   },
   fullHeight: {
     height: '100%',
