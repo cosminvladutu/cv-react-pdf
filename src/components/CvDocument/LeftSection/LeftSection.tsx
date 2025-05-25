@@ -3,12 +3,17 @@
 // It uses custom elements and panels for structured display in a PDF format using @react-pdf/renderer.
 //
 // Main sections:
-// - Profile picture
-// - Contact information (phone, email, location, LinkedIn, Skype)
-// - Skills list (with years of experience)
-// - Education details
+// - Profile picture (with rounded border and proper positioning)
+// - Contact information (phone, email, location, LinkedIn, Skype, etc., each with custom SVG icons)
+// - Skills list (with years of experience displayed in a tabular format)
+// - Education details (with proper handling of diacritical characters)
 //
-// Styling is handled via StyleSheet from @react-pdf/renderer.
+// Styling:
+// - Dark gray background (#434244) provides contrast with the right section
+// - Width is set to 30% of the page width
+// - SVG icons and content are styled for consistent alignment and spacing
+// - Special handling for diacritical characters (Romanian text) using DiacriticalText component
+// - Title elements colored with #42C7E5 for visual hierarchy
 //
 // Props: None (static content)
 //
@@ -24,11 +29,10 @@ import ContactItem from "./ContactItem";
 
 const LeftSection = () => {
   return (
-    <View style={[styles.container]}>
-      <View style={styles.profilePictureContainer}>
+    <View style={[styles.container]}>      <View style={styles.profilePictureContainer}>
         <Image style={styles.profilePicture} src="/images/DSC_8292 test.jpg" />
       </View>
-      <LeftSectionPanel title={'Contact'}>
+      <LeftSectionPanel title={'Contact'} titleColor="#42C7E5">
         <ContactItem
           icon={(
             <Svg width="10px" height="10px">
@@ -75,7 +79,7 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'in/cosmin-vladutu'}
-          link={'www.linkedin.com/in/cosmin-vladutu'}
+          link={'https://www.linkedin.com/in/cosmin-vladutu'}
         />        <ContactItem
     icon={(
             <Svg width="10px" height="10px">
@@ -100,10 +104,9 @@ const LeftSection = () => {
             )}
             text={'@cosmin-vladutu'}
             link={'https://medium.com/@cosmin-vladutu'}
-        />
-      </LeftSectionPanel>
+        />      </LeftSectionPanel>
 
-      <LeftSectionPanel title="Skills">
+      <LeftSectionPanel title="Skills" titleColor="#42C7E5">
         <SkillItem years={14} name="C#" />
         <SkillItem years={14} name=".NET" />
         <SkillItem years={13} name="SQL Server" />
@@ -126,7 +129,7 @@ const LeftSection = () => {
         <SkillItem years={2} name="ServiceBus" />
         <SkillItem years={2} name="Angular" />
         <SkillItem years={2} name="React" />
-      </LeftSectionPanel>      <LeftSectionPanel title="Education">
+      </LeftSectionPanel>      <LeftSectionPanel title="Education" titleColor="#42C7E5">
         <Text contrast isBold>Alexandru Ioan-Cuza University</Text>
         <Text contrast>Bachelor in Computer Science</Text>
         <DiacriticalText contrast>Iași, România, 2007 - 2010</DiacriticalText>

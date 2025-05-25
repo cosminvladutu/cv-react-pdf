@@ -1,11 +1,19 @@
 // CertificationItem.tsx
 // This component renders a single certification item for the CV document.
+// It handles proper text wrapping for certification names that are too long for a single line.
 //
 // Props:
 // - name: string — Name of the certification
-// - date: string — Date of the certification
+// - date: string — Date of the certification (displayed in the right column)
 //
-// Usage: Used in LeftSection to display a list of certifications.
+// Visual features:
+// - Smart text wrapping with line breaks at word boundaries
+// - Two-column layout with certification on left, date on right
+// - Increased spacing for multi-line items
+// - Proper contrast for dark background (using white text)
+// - Line height adjustment for better readability
+//
+// Usage: Used in LeftSectionWithCertifications to display a list of certifications.
 
 import React from "react";
 import {StyleSheet, View} from "@react-pdf/renderer";
