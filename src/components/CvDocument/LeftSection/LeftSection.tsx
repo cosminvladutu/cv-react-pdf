@@ -79,7 +79,7 @@ const LeftSection = () => {
             </Svg>
           )}
           text={'in/cosmin-vladutu'}
-          link={'www.linkedin.com/in/cosmin-vladutu'}
+          link={'https://www.linkedin.com/in/cosmin-vladutu'}
         />        <ContactItem
     icon={(
             <Svg width="10px" height="10px">
