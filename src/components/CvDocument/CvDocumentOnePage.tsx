@@ -32,16 +32,10 @@ Font.register({
   fonts: [
     { src: `${process.cwd()}/public/fonts/Lato/Lato-Regular.ttf`, fontStyle: 'normal', fontWeight: 'normal' },
     { src: `${process.cwd()}/public/fonts/Lato/Lato-Bold.ttf`, fontStyle: 'normal', fontWeight: 'bold' },
-    { src: `${process.cwd()}/public/fonts/Lato/Lato-Black.ttf`, fontStyle: 'normal', fontWeight: 'black' },
+  { src: `${process.cwd()}/public/fonts/Lato/Lato-Black.ttf`, fontStyle: 'normal', fontWeight: 900 },
     { src: `${process.cwd()}/public/fonts/Lato/Lato-Italic.ttf`, fontStyle: 'italic', fontWeight: 'normal' },
     { src: `${process.cwd()}/public/fonts/Lato/Lato-BoldItalic.ttf`, fontStyle: 'italic', fontWeight: 'bold' },
-    { src: `${process.cwd()}/public/fonts/Lato/Lato-BlackItalic.ttf`, fontStyle: 'italic', fontWeight: 'black' },
-  ],
-  langSystems: ['latn'],
-  unicodeRanges: [
-    'U+0000-00FF', // Latin Basic
-    'U+0100-017F', // Latin Extended-A (includes Romanian diacritics like Ă)
-    'U+0180-024F', // Latin Extended-B (includes Ț and other diacritics)
+  { src: `${process.cwd()}/public/fonts/Lato/Lato-BlackItalic.ttf`, fontStyle: 'italic', fontWeight: 900 },
   ],
 });
 
