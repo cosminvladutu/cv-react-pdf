@@ -57,7 +57,7 @@ export const projectsByName = {
     achievements: [
       <><Text isBold>Validated product-market fit early</Text> by reaching 600+ appointments across 7 locations and 15 doctors within the first months after launch, without any marketing efforts.</>,
       <><Text isBold>Reduced environment setup time to near 0</Text> by defining infrastructure and environments fully through Bicep and automated pipelines, enabling consistent deployments across environments.</>,
-      <><Text isBold>Introduced AI-driven capabilities</Text> into the platform design, enabling smarter booking flows and improving the foundation for future intelligent features.</>
+      <><Text isBold>Introduced AI-driven capabilities</Text> into the platform design, enabling smarter booking flows and improving the foundation for future intelligent features.</>,
     ],
     skills: ['.NET Core', 'PostgreSQL', 'Distributed Systems' , 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless', 'Python', 'React', 'AI-first coding approach'],
   },
