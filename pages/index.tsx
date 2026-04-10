@@ -50,7 +50,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Professional CV | Cosmin Vlăduțu</title>
-        <meta name="description" content="Professional CV for Cosmin Vlăduțu - Senior .NET Lead, Architect, Developer, Contractor, Freelancer" />
+        <meta name="description" content="Professional CV for Cosmin Vlăduțu - Software Cloud Architect, .NET Lead, Developer, Contractor, Freelancer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

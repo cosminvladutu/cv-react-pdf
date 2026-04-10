@@ -25,6 +25,7 @@ import Text from "./components/CvDocument/elements/Text";
 export type EnabledProjects = (keyof typeof projectsByName)[];
 
 export const enabledProjectsAll: EnabledProjects = [
+  'flow',
   'mek',
   'now',
   'medcom',
@@ -46,10 +47,24 @@ export const enabledProjectsOnePage: EnabledProjects = [
 
 
 export const projectsByName = {
+  flow: {
+    projectName: 'Flow',
+    from: 'December 2025',
+    to: 'Present',
+    title: 'Software Cloud Architect',
+    company: 'CGM',
+   clientProblem: 'The client, a German provider of medical software across multiple countries, needed a scalable solution to enable small clinics and medical centers to offer online appointment booking. This was a greenfield project, aiming to build a multi-tenant platform that could be easily integrated with existing systems, while remaining simple and intuitive for end users. From a technical perspective, the solution was designed as a cloud-native platform leveraging AI capabilities, providing a modern, extensible, and efficient foundation for both the client and their customers.',
+    achievements: [
+      <><Text isBold>Validated product-market fit early</Text> by reaching 600+ appointments across 7 locations and 15 doctors within the first months after launch, without any marketing efforts.</>,
+      <><Text isBold>Reduced environment setup time to near 0</Text> by defining infrastructure and environments fully through Bicep and automated pipelines, enabling consistent deployments across environments.</>,
+      <><Text isBold>Introduced AI-driven capabilities</Text> into the platform design, enabling smarter booking flows and improving the foundation for future intelligent features.</>
+    ],
+    skills: ['.NET Core', 'PostgreSQL', 'Distributed Systems' , 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless', 'Python', 'React', 'AI-first coding approach'],
+  },
   mek: {
     projectName: 'MEK',
     from: 'Jan 2025',
-    to: 'Present',
+    to: 'December 2025',
     title: 'Senior .NET Azure Lead',
     company: 'Arnia Software',
     clientProblem: 'The client, which is a German energy provider, needed a custom solution built over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly by the authorization and authentification system. The goal was to make it easier to configure and enhance Auth0’s standard features, and to create a unified system for logging in and managing user access across all their internal and customer facing apps.',
