@@ -59,7 +59,7 @@ export const projectsByName = {
       <><Text isBold>Reduced environment setup time to near 0</Text> by defining infrastructure and environments fully through Bicep and automated pipelines, enabling consistent deployments across environments.</>,
       <><Text isBold>Introduced AI-driven capabilities</Text> into the platform design, enabling smarter booking flows and improving the foundation for future intelligent features.</>,
     ],
-    skills: ['.NET Core', 'PostgreSQL', 'Distributed Systems' , 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless', 'Python', 'React', 'AI-first coding approach'],
+    skills: ['.NET', 'PostgreSQL', 'Distributed Systems' , 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless', 'Python', 'React', 'AI-first coding approach'],
   },
   mek: {
     projectName: 'MEK',
@@ -67,14 +67,14 @@ export const projectsByName = {
     to: 'December 2025',
     title: 'Senior .NET Azure Lead',
     company: 'Arnia Software',
-    clientProblem: 'The client, which is a German energy provider, needed a custom solution built over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly by the authorization and authentification system. The goal was to make it easier to configure and enhance Auth0’s standard features, and to create a unified system for logging in and managing user access across all their internal and customer facing apps.',
+    clientProblem: 'The client, which is a German energy provider, needed a custom solution built over Auth0 to centralize configuration and extend functionalities that couldn’t be handled directly by the authorization and authentication system. The goal was to make it easier to configure and enhance Auth0’s standard features, and to create a unified system for logging in and managing user access across all their internal and customer facing apps.',
     achievements: [
       <><Text isBold>Reduced operational costs</Text> by automating manual processes previously handled by interns.</>,
       <><Text isBold>Added 70%+ code coverage</Text>  across new components, improving maintainability, reducing regression risk, and supporting future refactorings.</>,
       <><Text isBold>Reduced manual configuration to 0</Text> by delivering all infrastructure changes using Bicep.</>,
       <><Text isBold>Led a team of 5</Text> from a feature lead position, owning end-to-end delivery of Azure and backend services (from architecture and development to deployment and monitoring), while mentoring team members and aligning with the client on solutions and estimates.</>,
     ],
-    skills: ['.NET Core', 'CosmosDb', 'DDD', 'CQRS', 'Auth0', 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless'],
+    skills: ['.NET', 'CosmosDb', 'DDD', 'CQRS', 'Auth0', 'Azure DevOps', 'Azure Services', 'Bicep', 'Serverless'],
   },
   now: {
     projectName: 'Now',
@@ -88,7 +88,7 @@ export const projectsByName = {
       <><Text isBold>Increased development speed by 30%</Text> by implementing trivial systems using the same patterns and keeping creation templates updated.</>,
     ],
     skills: ['C#', '.NET Core', 'EF Core', 'Azure Functions', 'Cosmos DB', 'Azure Services', 'Azure DevOps', 'ARM templates',
-       'EventGrid', 'Distributed Systems', 'Serverles'],
+       'EventGrid', 'Distributed Systems', 'Serverless'],
   },
   medcom: {
     projectName: 'MedCom',
@@ -182,7 +182,7 @@ export const projectsByName = {
     achievements: [
       <><Text isBold>Boosted product stability by 50%</Text> by creating nightly builds in which all the tests were run and introduced static code analysis with rules agreed upon at the suite level.</>,
       <><Text isBold>Shadow led a team of 7,</Text> and increased the communication and decision-making process by being the mediator between the dev team and architects and between team members.</>,
-      <><Text isBold>Reduced the number of production criticalbugs to 0</Text> by increasing the code-coverage from 30% to 60% and introducing well-known patterns instead of custom implementation.</>,
+      <><Text isBold>Reduced the number of production critical bugs to 0</Text> by increasing the code-coverage from 30% to 60% and introducing well-known patterns instead of custom implementation.</>,
 
     ],
     skills: ['.NET Famework', 'Windows Services', 'WCF Services', 'Windows Forms', 'MassTransit', 'RabbitMQ', 'Oracle', 'Azure DevOps', 'SonarQube', 'Selenium'],
