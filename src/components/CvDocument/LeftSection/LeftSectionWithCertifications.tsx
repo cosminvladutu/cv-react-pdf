@@ -21,6 +21,7 @@ const LeftSectionWithCertifications: React.FC = () => {  return (
     <View style={[styles.container]}>
       {/* Certifications section */}
       <LeftSectionPanel title="CERTIFICATIONS" titleColor="#42C7E5">
+        <CertificationItem name="Distributed Systems Design Fundamentals" date="Apr 2026" />
         <CertificationItem name="Microsoft Most Valuable Profesional" date="Mar 2025" />
         <CertificationItem name="AI for Product Management" date="Apr 2024" />
         <CertificationItem name="Product Management Basics Certification" date="Apr 2024" />
@@ -41,6 +42,8 @@ const LeftSectionWithCertifications: React.FC = () => {  return (
         <BlogContributionItem url="https://awstip.com/" />
         <BlogContributionItem url="https://bootcamp.uxdesign.cc/" />
         <BlogContributionItem url="https://towardsdev.com/" />
+        <BlogContributionItem url="https://aws.plainenglish.io/" />
+        <BlogContributionItem url="https://www.codetodeploy.tech/" />
       </LeftSectionPanel></View>
   )
 }
