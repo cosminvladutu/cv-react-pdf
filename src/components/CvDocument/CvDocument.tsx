@@ -83,7 +83,7 @@ const CvDocument = () => {
   const firstPageProjects = projects.slice(0, 3); // First 3 projects on first page
   const secondPageProjects = projects.slice(3, 7); // Next 4 projects on second page
   const thirdPageProjects = projects.slice(7, 11); // Next 4 projects on third page
-
+  const forthPageProjects = projects.slice(11, 12); // Next 1 projects on fourth page
   
   return (
     <Document>
@@ -111,6 +111,16 @@ const CvDocument = () => {
         <LeftSectionEmpty/>
         <RightSection
           projects={thirdPageProjects}
+          workExperienceTitle=""
+          hideHeader={true}
+        />
+      </Page>
+
+      {/* Fourth page with more projects */}
+      <Page size="A4" style={styles.page} wrap={false}>
+        <LeftSectionEmpty/>
+        <RightSection
+          projects={forthPageProjects}
           workExperienceTitle=""
           hideHeader={true}
         />
