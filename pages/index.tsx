@@ -5,8 +5,7 @@
 
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import {PDFViewer} from "@react-pdf/renderer";
+import { pdf } from "@react-pdf/renderer";
 import styles from '../styles/Home.module.css'
 import CvDocument from "../src/components/CvDocument";
 import React, {useEffect, useMemo, useState} from "react";
@@ -25,6 +24,7 @@ import CvDocumentOnePage from "../src/components/CvDocument/CvDocumentOnePage";
 const Home: NextPage = () => {
   const [showFullPdf, setShowFullPdf] = useState(false);
   const [showOnePagePdf, setShowOnePagePdf] = useState(false);
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
   // useEffect(() => {
   //   setShowFullPdf(true)
   // }, [])
@@ -39,6 +39,42 @@ const Home: NextPage = () => {
 
     return null;
   }, [showFullPdf, showOnePagePdf]);
+
+  useEffect(() => {
+    let isCancelled = false;
+    let generatedObjectUrl: string | null = null;
+
+    const generatePdfUrl = async () => {
+      if (!cvDocumentElement) {
+        setPdfUrl(null);
+        return;
+      }
+
+      try {
+        const blob = await pdf(cvDocumentElement).toBlob();
+        if (isCancelled) {
+          return;
+        }
+
+        generatedObjectUrl = URL.createObjectURL(blob);
+        setPdfUrl(`${generatedObjectUrl}#toolbar=1`);
+      } catch (error) {
+        console.error('Failed to generate PDF blob', error);
+        if (!isCancelled) {
+          setPdfUrl(null);
+        }
+      }
+    };
+
+    generatePdfUrl();
+
+    return () => {
+      isCancelled = true;
+      if (generatedObjectUrl) {
+        URL.revokeObjectURL(generatedObjectUrl);
+      }
+    };
+  }, [cvDocumentElement]);
 
   // Handler for closing the PDF viewer
 
@@ -62,16 +98,18 @@ const Home: NextPage = () => {
         {/* Show PDF viewer when a document is selected */}
         {!!cvDocumentElement && (
           <div style={{position: 'fixed', width: '100vw', height: '100vh'}}>
-            <PDFViewer 
-              style={{
-                position: 'absolute',
-                width: '100vw',
-                height: '100vh',
-              }}
-              showToolbar={true}
-            >
-              {cvDocumentElement}
-            </PDFViewer>
+            {pdfUrl && (
+              <iframe
+                title="CV PDF"
+                src={pdfUrl}
+                style={{
+                  position: 'absolute',
+                  width: '100vw',
+                  height: '100vh',
+                  border: 'none',
+                }}
+              />
+            )}
             <a
               style={{
                 position: "fixed",
