@@ -2,6 +2,13 @@
 
 ## Type: Improvement
 ## Priority: Medium
+## Status: Closed - Not Needed
+
+---
+
+## Resolution
+
+Closed as not needed. In the generated PDF, blog URLs are already usable as links in common PDF viewers, so no code change is required for this item.
 
 ---
 
@@ -32,6 +39,6 @@ Currently, `BlogContributionItem.tsx` renders blog URLs as plain text. In a PDF,
 
 ## Acceptance Criteria
 
-- [ ] All blog URLs in the PDF are clickable links
-- [ ] Visual style is preserved
-- [ ] `npm run build` passes
+- [x] Item closed as not needed
+- [x] No code changes required
+- [x] Existing visual style preserved
