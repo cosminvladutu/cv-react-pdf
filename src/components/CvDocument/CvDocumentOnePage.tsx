@@ -18,7 +18,7 @@
 
 import React from 'react';
 import {Page, Text, View, Document, StyleSheet, Image, Font} from '@react-pdf/renderer';
-import { LeftSectionOnePage } from "./LeftSection";
+import LeftSection from "./LeftSection/LeftSection";
 import RightSection from "./RightSection";
 import {enabledProjectsOnePage, projectsByName} from "../../data";
 import {ProjectCardProps} from "./RightSection/ProjectCard";
@@ -61,7 +61,7 @@ const CvDocumentOnePage = () => {
   }));  return (
     <Document>
       <Page size="A4" style={styles.page} wrap={false}>
-        <LeftSectionOnePage />
+        <LeftSection compact />
         <RightSection
           projects={projects}
           workExperienceTitle="Most Relevant Work Experience"

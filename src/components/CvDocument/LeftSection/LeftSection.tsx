@@ -27,10 +27,15 @@ import LeftSectionPanel from "./LeftSectionPanel";
 import SkillItem from "./SkillItem";
 import ContactItem from "./ContactItem";
 
-const LeftSection = () => {
+type LeftSectionProps = {
+  compact?: boolean;
+};
+
+const LeftSection = ({ compact = false }: LeftSectionProps) => {
   return (
-    <View style={[styles.container]}>      <View style={styles.profilePictureContainer}>
-        <Image style={styles.profilePicture} src="/images/DSC_8292 test.jpg" />
+    <View style={[styles.container]}>
+      <View style={compact ? [styles.profilePictureContainer, styles.profilePictureContainerCompact] : [styles.profilePictureContainer]}>
+        <Image style={compact ? [styles.profilePicture, styles.profilePictureCompact] : [styles.profilePicture]} src="/images/DSC_8292 test.jpg" />
       </View>
       <LeftSectionPanel title={'Contact'} titleColor="#42C7E5">
         <ContactItem
@@ -148,9 +153,16 @@ const styles = StyleSheet.create({
     marginHorizontal: 'auto',
     marginBottom: 15
   },
+  profilePictureContainerCompact: {
+    width: '80%',
+    marginBottom: 10,
+  },
   profilePicture: {
     borderRadius: 9999,
     transform: 'translateY(10px)',
+  },
+  profilePictureCompact: {
+    transform: 'translateY(8px)',
   },
   contactItemContainer: {
     flexDirection: 'row',

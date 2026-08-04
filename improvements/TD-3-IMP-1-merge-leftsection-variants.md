@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
 
 ## Acceptance Criteria
 
-- [ ] `LeftSectionOnePage.tsx` deleted
-- [ ] `LeftSection.tsx` accepts `compact` prop
-- [ ] One-page PDF renders with the compact style (smaller profile picture)
-- [ ] Full-page PDF renders with the normal style
-- [ ] No duplication of contact items, skill items, or education blocks
-- [ ] `npm run build` passes
+- [x] `LeftSectionOnePage.tsx` deleted
+- [x] `LeftSection.tsx` accepts `compact` prop
+- [x] One-page PDF renders with the compact style (smaller profile picture)
+- [x] Full-page PDF renders with the normal style
+- [x] No duplication of contact items, skill items, or education blocks
+- [x] `npm run build` passes

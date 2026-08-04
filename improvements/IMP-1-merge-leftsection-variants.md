@@ -21,6 +21,6 @@ See TD-3 for full context. The two LeftSection variants are nearly identical and
 
 ## Acceptance Criteria
 
-- [ ] No code duplication between LeftSection variants
-- [ ] Both PDF types render correctly
-- [ ] `npm run build` passes
+- [x] No code duplication between LeftSection variants
+- [x] Both PDF types render correctly
+- [x] `npm run build` passes
