@@ -21,6 +21,8 @@ const LeftSectionWithCertifications: React.FC = () => {  return (
     <View style={[styles.container]}>
       {/* Certifications section */}
       <LeftSectionPanel title="CERTIFICATIONS" titleColor="#42C7E5">
+        <CertificationItem name="Microsoft Most Valuable Professional (MVP)" date="Jul 2026" />        
+        <CertificationItem name="Github Copilot" date="Mar 2026" />        
         <CertificationItem name="Distributed Systems Design Fundamentals" date="Apr 2026" />
         <CertificationItem name="Microsoft Most Valuable Professional" date="Mar 2025" />
         <CertificationItem name="AI for Product Management" date="Apr 2024" />

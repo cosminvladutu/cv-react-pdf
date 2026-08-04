@@ -105,20 +105,20 @@ const LeftSectionOnePage = () => {
         />      </LeftSectionPanel>
 
       <LeftSectionPanel title="Skills" titleColor="#42C7E5">
-        <SkillItem years={14} name="C#" />
-        <SkillItem years={14} name=".NET" />
+        <SkillItem years={15} name="C#" />
+        <SkillItem years={15} name=".NET" />
         <SkillItem years={13} name="SQL Server" />
         <SkillItem years={10} name="Entity framework" />
         <SkillItem years={10} name="Unit & Integration Tests" />
-        <SkillItem years={4} name="Azure Functions" />
-        <SkillItem years={4} name="Mutation Tests" />
+        <SkillItem years={8} name="Azure DevOps" />
+        <SkillItem years={7} name="Azure Services" />
         <SkillItem years={6} name="CQRS" />
-        <SkillItem years={7} name="Azure DevOps" />
-        <SkillItem years={6} name="Azure Services" />
+        <SkillItem years={5} name="Azure Functions" />
+        <SkillItem years={4} name="Mutation Tests" />
         <SkillItem years={4} name="CosmosDB" />
-        <SkillItem years={4} name="Distributed Systems" />
-        <SkillItem years={4} name="Serverless" />
-        <SkillItem years={4} name="ARM Templates & Bicep" />
+        <SkillItem years={5} name="Distributed Systems" />
+        <SkillItem years={5} name="Serverless" />
+        <SkillItem years={5} name="ARM Templates & Bicep" />
         <SkillItem years={3} name="SonarQube" />
         <SkillItem years={2} name="Windows Services" />
         <SkillItem years={2} name="IdentityServer" />

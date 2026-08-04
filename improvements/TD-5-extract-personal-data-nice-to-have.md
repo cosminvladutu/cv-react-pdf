@@ -61,14 +61,16 @@ export const profileTitles = [
 ];
 
 export const profileAbout = [
-  <>I am a Microsoft MVP, Software Cloud Architect, and certified (MCSD and Azure) .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>14+ years of experience</Text>. My expertise lies in both front-end and back-end development, and I have a keen interest in Azure and AI.</>,
+  <>I am a Microsoft MVP, Software Cloud Architect, and certified (MCSD and Azure) .NET lead / developer / contractor / freelancer with <Text style={{fontWeight: 'black'}}>15+ years of experience</Text>. My expertise lies in both front-end and back-end development, and I have a keen interest in Azure and AI.</>,
   <>I assist clients in accomplishing their objectives by crafting, architecting, and executing clean and resilient software solutions while also assembling, nurturing and leading high-performing teams.</>,
+  <>I am also actively involved in the .NET community as one of the organizers of the dotnet Iasi community 
+(meetup) and part of the organizing team behind DevDays.ro .</>,
   <><Text style={{fontWeight: 'black'}}>Drop me a message</Text> if you think my expertise could help your organization!</>,
 ];
 
 export const skills = [
-  { name: 'C#', years: 14 },
-  { name: '.NET', years: 14 },
+  { name: 'C#', years: 15 },
+  { name: '.NET', years: 15 },
   // ... all 22
 ];
 
