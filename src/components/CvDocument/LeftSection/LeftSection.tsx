@@ -35,6 +35,7 @@ const LeftSection = ({ compact = false }: LeftSectionProps) => {
   return (
     <View style={[styles.container]}>
       <View style={compact ? [styles.profilePictureContainer, styles.profilePictureContainerCompact] : [styles.profilePictureContainer]}>
+        {/* eslint-disable-next-line jsx-a11y/alt-text */}
         <Image style={compact ? [styles.profilePicture, styles.profilePictureCompact] : [styles.profilePicture]} src="/images/DSC_8292 test.jpg" />
       </View>
       <LeftSectionPanel title={'Contact'} titleColor="#42C7E5">

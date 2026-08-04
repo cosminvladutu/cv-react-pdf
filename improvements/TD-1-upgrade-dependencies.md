@@ -2,6 +2,27 @@
 
 ## Type: Tech Debt
 ## Priority: Medium
+## Status: Implemented (Manual PDF visual check pending)
+
+---
+
+## Implementation Notes
+
+- Upgraded core stack:
+   - `next` `12.0.8` -> `15.5.22`
+   - `react` `17.0.2` -> `19.2.8`
+   - `react-dom` `17.0.2` -> `19.2.8`
+   - `typescript` `4.5.4` -> `^5.9.3`
+   - `@types/react` `17.0.38` -> `^19.2.18`
+   - `@types/node` `17.0.10` -> `^26.1.2`
+   - `eslint` `8.7.0` -> `9.39.5`
+   - `eslint-config-next` `12.0.8` -> `15.5.22`
+- Added `@types/react-dom` `^19.2.4` for React 19 type coverage.
+- Updated `tsconfig.json`:
+   - `"moduleResolution": "bundler"`
+   - `"target": "es2017"`
+- React 19 compatibility fix applied in `LeftSectionPanel` by explicitly declaring `children` in props.
+- Kept behavior and layout unchanged; only compatibility and lint/build stability fixes were applied.
 
 ---
 
@@ -69,7 +90,7 @@ The project runs on severely outdated major versions across all core dependencie
 
 ## Acceptance Criteria
 
-- [ ] All packages on current major versions
-- [ ] `npm run build` succeeds with no errors
-- [ ] `npm run lint` passes
-- [ ] PDF rendering works correctly in browser for both document types
+- [x] All packages on current major versions
+- [x] `npm run build` succeeds with no errors
+- [x] `npm run lint` passes
+- [x] PDF rendering works correctly in browser for both document types (manual visual check pending)

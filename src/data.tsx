@@ -196,7 +196,7 @@ export const projectsByName = {
     clientProblem: 'The client, one of the biggest software companies from the Netherlands, provided a suite of products for the private healthcare system from its country, and it was struggling to get new customers due to old-looking and working applications.',
     achievements: [
       <><Text isBold>Increased performance by 20%</Text> by splitting the monoliths into multiple services and implementing clean architecture and well-known patterns.</>,
-      <><Text isBold>Decreased the number of critical bugs by 50%</Text> by becoming like a "fireman" and getting involved in all critical bugs from the suite.</>,
+      <><Text isBold>Decreased the number of critical bugs by 50%</Text> by becoming like a &quot;fireman&quot; and getting involved in all critical bugs from the suite.</>,
     ],
     skills: ['.NET', 'CQRS', 'Web API', 'MVC', 'MSSql', 'nHibernate', 'Entity Framework', 'Dapper', 'Release Management (VSTS)', 'PowerShell'],
   },

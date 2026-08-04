@@ -16,6 +16,7 @@
 // Usage: Used in LeftSection to group contact info, skills, and education.
 
 import React from "react";
+import type { ReactNode } from "react";
 import {StyleSheet, View} from '@react-pdf/renderer'
 import Text from "../elements/Text";
 import Title from "../elements/Title";
@@ -23,6 +24,7 @@ import Title from "../elements/Title";
 interface LeftSectionPanelProps {
   title: string;
   titleColor?: string;
+  children?: ReactNode;
 }
 
 const LeftSectionPanel: React.FC<LeftSectionPanelProps> = ({title, titleColor, children}) => {
